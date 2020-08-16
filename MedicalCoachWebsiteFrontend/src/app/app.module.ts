@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 // import { AccountModule } from '@angular/forms';
-
+// import { FormsModule } from '@angular/forms';
 // used to create fake backend
 // import { fakeBackendProvider } from 'src/app/helpers'/;
 
@@ -16,21 +17,27 @@ import { AlertComponent } from './components/alert.component';
 import { HomeComponent } from './home/home.component';
 import { AccountModule } from 'src/app/account/account.module';
 import { UsersModule } from 'src/app/users/users.module';
+import { ClientModule } from 'src/app/layouts/client/client.module';
+
+import { ClientComponent } from './layouts/client/client.component';
 // import { LayoutComponent } from 'src/app/account/layout.component';
 
 @NgModule({
     imports: [
+      FormsModule,
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
         AppRoutingModule,
         AccountModule,
-        UsersModule
+        UsersModule,
+        ClientModule
     ],
     declarations: [
         AppComponent,
         AlertComponent,
         HomeComponent,
+        ClientComponent,
       //  LayoutComponent
     ],
     providers: [

@@ -16,8 +16,8 @@ doctordetail: any;
       this.accountService.getAll()
         .pipe(first())
         .subscribe(results => {
-          console.log(results.data);
-          this.doctordetail = results.data});
+          // console.log(results.data);
+          this.doctordetail = results});
 
 
   }
