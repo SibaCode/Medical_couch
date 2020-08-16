@@ -13,7 +13,7 @@ doctordetail: any;
 
 
     ngOnInit() {
-      this.accountService.getAll()
+      this.accountService.getDoctors()
         .pipe(first())
         .subscribe(results => {
           // console.log(results.data);

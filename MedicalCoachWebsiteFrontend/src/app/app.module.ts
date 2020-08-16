@@ -20,6 +20,7 @@ import { UsersModule } from 'src/app/users/users.module';
 import { ClientModule } from 'src/app/layouts/client/client.module';
 
 import { ClientComponent } from './layouts/client/client.component';
+import { LandingComponent } from './landing/landing.component';
 // import { LayoutComponent } from 'src/app/account/layout.component';
 
 @NgModule({
@@ -38,6 +39,7 @@ import { ClientComponent } from './layouts/client/client.component';
         AlertComponent,
         HomeComponent,
         ClientComponent,
+        LandingComponent,
       //  LayoutComponent
     ],
     providers: [

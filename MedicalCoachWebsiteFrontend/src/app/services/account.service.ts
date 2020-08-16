@@ -51,7 +51,7 @@ public doctordetails: Observable<User>;
     register(user: User) {
         return this.http.post(`${environment.apiUrl}/users/register`, user);
     }
-    getAll() {
+    getDoctors() {
            return this.http.get<User[]>(`${environment.apiUrl}/doctor`,{
 
              headers: { Authentication: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEwLCJ0eXBlIjoicCIsImlhdCI6MTU5NzQzNzI5MSwiZXhwIjoxNTk4MjM3MjkxfQ.AK1dqV3qw2gvEuAQBZlc25997fb2_HHhHRYSOMs5vHI`
@@ -59,7 +59,7 @@ public doctordetails: Observable<User>;
 
            });
        }
-    getDoctors() {
+    getAll() {
         // return this.http.get<User[]>(`${environment.apiUrl}/doctor`,{
         //   headers: { Authentication: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEwLCJ0eXBlIjoicCIsImlhdCI6MTU5NzQzNzI5MSwiZXhwIjoxNTk4MjM3MjkxfQ.AK1dqV3qw2gvEuAQBZlc25997fb2_HHhHRYSOMs5vHI`}
         // });
@@ -69,7 +69,7 @@ public doctordetails: Observable<User>;
         let userToken = data.data.token ;
         return this.http.get<User[]>(`${environment.apiUrl}/doctor`,{
           headers: { Authentication: userToken}
-          
+
         });
     }
 

@@ -1,3 +1,4 @@
+
 <div class="p-4">
     <div class="container">
         <!-- <h1>Hi {{user.firstName}}!</h1> -->
@@ -5,6 +6,4 @@
         <p><a routerLink="/users">Manage Users</a></p>
     </div>
 </div>
-<tr *ngFor="let doctordetails of doctordetail">
-    <td>gvgh{{doctordetails.name}}</td>
-</tr>
+<router-outlet></router-outlet>
