@@ -49,7 +49,7 @@
 		<nav class="navbar navbar-expand-lg navbar-light" >
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
-				<a class="navbar-brand logo_h" href="index.html">
+				<a class="navbar-brand logo_h" routerLink="/home">
 					<img src="assets/img//logo.png" class="logo">
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -75,7 +75,7 @@
 											<a class="nav-link" routerLink="/patient">Patient</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" routerLink="/login">Doctors</a>
+											<a class="nav-link" routerLink="/doctor">Doctors</a>
 										</li>
 										<li class="nav-item">
 											<a class="nav-link" routerLink="/pharmacy">Pharmacy</a>
@@ -86,7 +86,7 @@
 									<a class="nav-link" routerLink="/contact">Contact</a>
 								</li>
                 <li class="nav-item ">
-                  <a class="nav-link" routerLink="/patient-dashboard">Login</a>
+                  <a class="nav-link" routerLink="/login">Login</a>
                 </li>
                 <li class="nav-item " >
                   <a class="nav-link"  (click)="logout()">Logout</a>
@@ -106,7 +106,7 @@
 				<div class="banner_content text-left">
 					<h2>Find A Doctor</h2>
 					<div class="page_link">
-						<a href="index.html">Location</a>
+						<a routerLink="/home">Location</a>
 						<a href="doctors.html">Midrand</a>
 					</div>
 				</div>

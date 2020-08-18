@@ -17,6 +17,7 @@ import { PatientComponent } from './pages/patient/patient.component';
 import { DoctorComponent } from './pages/doctor/doctor.component';
 import { PharmacyComponent } from './pages/pharmacy/pharmacy.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { DashboardComponent } from './pages/patientDashboard/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     PatientComponent,
     DoctorComponent,
     PharmacyComponent,
-    ContactComponent
+    ContactComponent,
+    // DashboardComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
