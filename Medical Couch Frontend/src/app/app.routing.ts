@@ -18,7 +18,7 @@ import { RegisterComponent } from './pages/register/register.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   // { path: 'second', component: SecondComponent },
-  { path: 'login', component: LoginComponent },
+   { path: 'login', component: LoginComponent },
    { path: 'home', component: HomeComponent },
    { path: 'doctor', component: DoctorComponent },
    { path: 'patient', component: PatientComponent },
