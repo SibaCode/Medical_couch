@@ -1,0 +1,230 @@
+
+		<!-- Main Wrapper -->
+        <div class="main-wrapper">
+
+			<!-- Header -->
+            <div class="header">
+
+				<!-- Logo -->
+                <div class="header-left">
+                    <a  class="logo">
+						<img src="assets/images/logo.png" alt="Logo">
+					</a>
+					<a  class="logo logo-small">
+						<img src="assets/images/logo.png" alt="Logo" width="30" height="30">
+					</a>
+                </div>
+				<!-- /Logo -->
+
+				<a href="javascript:void(0);" id="toggle_btn">
+					<i class="fe fe-text-align-left"></i>
+				</a>
+
+
+
+				<!-- Mobile Menu Toggle -->
+				<a class="mobile_btn" id="mobile_btn">
+					<i class="fa fa-bars"></i>
+				</a>
+				<!-- /Mobile Menu Toggle -->
+
+				<!-- Header Right Menu -->
+				<ul class="nav user-menu">
+
+
+
+					<!-- User Menu -->
+					<li class="nav-item dropdown has-arrow">
+						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+							<span class="user-img"><img class="rounded-circle" src="assets/images/doctor/Doctor-01.jpeg" width="31" alt="Ryan Taylor"></span>
+						</a>
+						<div class="dropdown-menu">
+							<div class="user-header">
+								<div class="avatar avatar-sm">
+									<img src="assets/images/doctor/Doctor-01.jpeg" alt="User Image" class="avatar-img rounded-circle">
+								</div>
+								<div class="user-text">
+									<h6>Sibahle Mvubu</h6>
+									<p class="text-muted mb-0">Administrator</p>
+								</div>
+							</div>
+							<a class="dropdown-item" routerLink="/home">Logout</a>
+						</div>
+					</li>
+					<!-- /User Menu -->
+
+				</ul>
+				<!-- /Header Right Menu -->
+
+            </div>
+			<!-- /Header -->
+
+			<!-- Sidebar -->
+      <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+          <div id="sidebar-menu" class="sidebar-menu">
+            <ul>
+              <li >
+                <a routerLink="/dashboard" ><i class="fe fe-home"></i> <span>Dashboard</span></a>
+              </li>
+              <li>
+                <a routerLink="/appointments" ><i class="fe fe-layout"></i> <span>Appointments</span></a>
+              </li>
+              <li class="active">
+                <a routerLink="/profile" ><i class="fe fe-user-plus"></i> <span>Profile</span></a>
+              </li>
+              <li>
+                <a routerLink="/logout" ><i class="fe fe-warning"></i> <span>Logout</span></a>
+              </li>
+            </ul>
+          </div>
+          </div>
+      </div>
+			<!-- /Sidebar -->
+
+			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+
+                <div class="content container-fluid">
+
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row">
+							<div class="col-sm-12">
+								<h3 class="page-title">Profile</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item active">Profile</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- /Page Header -->
+          <div class="row">
+        						<div class="col-12">
+
+                      <div class="row">
+
+                  <div class="col-md-12 col-lg-8 col-xl-9">
+            <div class="card">
+              <div class="card-body">
+
+                <!-- Profile Settings Form -->
+                <div>
+                  <div class="row form-row info-widget">
+                    <!-- <div class="col-12 col-md-12">
+                      <div class="form-group card-label">
+                        <div class="change-avatar">
+                          <div class="profile-img">
+                            <img src="assets/img/patients/patient.jpg" alt="User Image">
+                          </div>
+                          <div class="upload-img">
+                            <div class="change-photo-btn">
+                              <span><i class="fa fa-upload"></i> Upload Photo</span>
+                              <input type="file" class="upload">
+                            </div>
+                            <small class="form-text text-muted">Allowed JPG, GIF or PNG. Max size of 2MB</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+
+                    <div class="col-12 col-md-6">
+                      <div class="form-group card-label">
+                        <label>First Name</label>
+                        <input type="text" class="form-control" value="Richard">
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-group card-label">
+                        <label>Last Name</label>
+                        <input type="text" class="form-control" value="Wilson">
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-group card-label">
+                        <label>Date of Birth</label>
+                        <div class="cal-icon">
+                          <input type="text" class="form-control datetimepicker" value="24-07-1983">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-group card-label">
+                        <label>Blood Group</label>
+                        <select class="form-control select">
+                          <option>A-</option>
+                          <option>A+</option>
+                          <option>B-</option>
+                          <option>B+</option>
+                          <option>AB-</option>
+                          <option>AB+</option>
+                          <option>O-</option>
+                          <option>O+</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-group card-label">
+                        <label>Email ID</label>
+                        <input type="email" class="form-control" value="richard@example.com">
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-group card-label">
+                        <label>Mobile</label>
+                        <input type="text" value="+1 202-555-0125" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group card-label">
+                      <label>Address</label>
+                        <input type="text" class="form-control" value="806 Twin Willow Lane">
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-group card-label">
+                        <label>City</label>
+                        <input type="text" class="form-control" value="Old Forge">
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-group card-label">
+                        <label>State</label>
+                        <input type="text" class="form-control" value="Newyork">
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-group card-label">
+                        <label>Zip Code</label>
+                        <input type="text" class="form-control" value="13420">
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-group card-label">
+                        <label>Country</label>
+                        <input type="text" class="form-control" value="United States">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="submit-section">
+                    <button type="submit" class="btn btn-primary submit-btn">Save Changes</button>
+                  </div>
+                </div>
+                <!-- /Profile Settings Form -->
+
+              </div>
+            </div>
+          </div>
+      					</div>
+
+        						</div>
+        		</div>
+
+
+				</div>
+			</div>
+			<!-- /Page Wrapper -->
+
+        </div>
+		<!-- /Main Wrapper -->
