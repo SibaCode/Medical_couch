@@ -14,6 +14,9 @@ import { DoctorProfileComponent } from './pages/PatientDashboard/doctor-profile/
 import { ProfileComponent } from './pages/PatientDashboard/profile/profile.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AppointmentsComponent } from './pages/PatientDashboard/appointments/appointments.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,10 +31,15 @@ import { AppointmentsComponent } from './pages/PatientDashboard/appointments/app
     ProfileComponent,
     HomeComponent,
     AppointmentsComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

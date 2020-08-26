@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "medicalCouchSite"
+    }
+  },
+  "defaultProject": "medicalCouchSite",
+  "cli": {
+    "analytics": false
+  }
 }
