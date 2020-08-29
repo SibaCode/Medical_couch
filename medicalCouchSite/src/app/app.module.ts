@@ -16,6 +16,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { AppointmentsComponent } from './pages/PatientDashboard/appointments/appointments.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory })
 
   ],
   providers: [],
