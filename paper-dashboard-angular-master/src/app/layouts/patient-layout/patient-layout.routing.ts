@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 
 import { DashboardComponent } from '../../pages/PatientDashboard/dashboard/dashboard.component';
 import { BookingComponent } from '../../pages/PatientDashboard/booking/booking.component';
+import { AppointmentsComponent } from '../../pages/PatientDashboard/appointments/appointments.component';
 
 // import { UserComponent } from '../../pages/PatientDashboard/user/user.component';
 // import { TableComponent } from '../../pages/table/table.component';
@@ -14,6 +15,8 @@ import { BookingComponent } from '../../pages/PatientDashboard/booking/booking.c
 export const PatientLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'booking',           component: BookingComponent },
+    { path: 'appointments',          component: AppointmentsComponent },
+    // { path: 'typography',     component: TypographyComponen
     // { path: 'table',          component: TableComponent },
     // { path: 'typography',     component: TypographyComponent },
     // { path: 'icons',          component: IconsComponent },
