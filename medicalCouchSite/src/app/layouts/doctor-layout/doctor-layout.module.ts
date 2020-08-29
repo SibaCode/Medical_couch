@@ -12,10 +12,10 @@ import { ProfileComponent } from '../../pages/DoctorDashboard/profile/profile.co
   declarations: [
     DashboardComponent,
     ProfileComponent
-  ]
+  ],
   imports: [
     CommonModule,
-      RouterModule.forChild(AdminLayoutRoutes),
+      RouterModule.forChild(DoctorLayoutRoutes),
       FormsModule,
       HttpClientModule,
   ]

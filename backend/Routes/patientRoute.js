@@ -25,4 +25,6 @@ patientRoute.patch("/", auth , async(req, res) => {
     res.status(result.status).send(result);
 });
   
+
+
 module.exports = patientRoute ; 

@@ -14,4 +14,13 @@ export class PatientService {
   public update(user) {
     return this.http.patch(environment.url + 'patient' , user ,{ headers: this.headers } )
   }
+
+  public register(user) {
+    return this.http.post(environment.url + 'patient' , user )
+  }
+
+
+  public getMedicalAid() {
+    return this.http.get(environment.url + 'aid')
+  }
 }

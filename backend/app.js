@@ -3,6 +3,7 @@ const app = express();
 const doctor = require("./Routes/doctorRoute");
 const patient = require("./Routes/patientRoute");
 const appoint = require("./Routes/appointmentsRoute");
+const aid = require("./Routes/aidRoute");
 const cors = require("cors");
 let morgan = require("morgan");
 // var CronJob = require('cron').CronJob;
@@ -26,6 +27,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/api/v1/doctor", doctor);
 app.use("/api/v1/patient", patient);
 app.use("/api/v1/appointment", appoint);
+app.use("/api/v1/aid", aid)
 
 // default route
 app.use("/", (req, res, next) => {
