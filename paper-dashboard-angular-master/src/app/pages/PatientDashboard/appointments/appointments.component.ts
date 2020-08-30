@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PatientService } from '../../../services/patient.service';
 import { AppointmentResponse, Appointment } from '../../../models/appointment';
 
+import Swal from 'sweetalert2'
 @Component({
   selector: 'app-appointments',
   templateUrl: './appointments.component.html',
@@ -18,5 +19,13 @@ export class AppointmentsComponent implements OnInit {
       console.log(res)
     })
   }
+  cancel() {
 
+    Swal.fire({
+  title: 'Error!',
+  text: 'Do you want to continue',
+  icon: 'error',
+  confirmButtonText: 'Cool'
+})
+  }
 }
