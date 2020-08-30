@@ -26,7 +26,23 @@ export class LoginComponent implements OnInit {
 
     this.auth.loginPatient(this.loginForm.value).subscribe( (res: UserResponse) => {
         localStorage.setItem('user', JSON.stringify(res.data.user )) ;
-        localStorage.setItem('token', JSON.stringify(res.data.token ))
+        localStorage.setItem('token', JSON.stringify(res.data.token ));
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          onOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+          }
+        })
+        
+        Toast.fire({
+          icon: 'success',
+          title: 'Signed in successfully'
+        })
         this.route.navigate(['/patient'])
 
     }, (error) => {
