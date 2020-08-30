@@ -18,6 +18,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { DoctorInfoComponent } from './pages/doctor-info/doctor-info.component';
+import { PatientInfoComponent } from './pages/patient-info/patient-info.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
     ProfileComponent,
     HomeComponent,
     AppointmentsComponent,
+    DoctorInfoComponent,
+    PatientInfoComponent,
     
   ],
   imports: [

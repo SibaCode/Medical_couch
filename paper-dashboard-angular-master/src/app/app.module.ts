@@ -34,6 +34,9 @@ import { PracticeProfileComponent } from './pages/DoctorDashboard/practice-profi
 import { DoctorLayoutComponent } from './layouts/doctor-layout/doctor-layout.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { DoctorInfoComponent } from './pages/doctor-info/doctor-info.component';
+import { PatientInfoComponent } from './pages/patient-info/patient-info.component';
+import { PharmacyInfoComponent } from './pages/pharmacy-info/pharmacy-info.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +50,10 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
     AppointmentsComponent,
     ProfileComponent,
     PracticeProfileComponent,
-    DoctorLayoutComponent
+    DoctorLayoutComponent,
+    DoctorInfoComponent,
+    PatientInfoComponent,
+    PharmacyInfoComponent
   ],
   imports: [
     BrowserAnimationsModule,
