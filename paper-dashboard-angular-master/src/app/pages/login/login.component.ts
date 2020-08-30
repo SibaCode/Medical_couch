@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
 
     this.auth.loginPatient(this.loginForm.value).subscribe( (res: UserResponse) => {
         localStorage.setItem('user', JSON.stringify(res.data.user )) ;
+        localStorage.setItem('token', JSON.stringify(res.data.token ))
         this.route.navigate(['/patient'])
 
     }, (error) => {

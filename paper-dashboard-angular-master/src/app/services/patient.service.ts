@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
+import { User } from '../../../../medicalCouchSite/src/app/models/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PatientService {
 
-  headers = new HttpHeaders().set('Authentication', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsInR5cGUiOiJwIiwiaWF0IjoxNTk4NDYwNDgyLCJleHAiOjE1OTkyNjA0ODJ9.dSyRWBdOHbP5uWkHpKml2_09SG4pRBQ3otHloMcEqKI');
-  
+
+  user: User ;
   constructor(private http: HttpClient) { }
 
   public update(user) {
-    return this.http.patch(environment.url + 'patient' , user ,{ headers: this.headers } )
+    return this.http.patch(environment.url + 'patient' , user ,{ headers: this.getheaders() } )
   }
 
   public register(user) {
@@ -22,5 +23,16 @@ export class PatientService {
 
   public getMedicalAid() {
     return this.http.get(environment.url + 'aid')
+  }
+
+  public getBooking() {
+
+    return this.http.get(environment.url + 'appointment/patient', { headers: this.getheaders() })
+  }
+
+  public getheaders() {
+    
+    let headers = new HttpHeaders().set('Authentication', localStorage.getItem('token').substring(1 , localStorage.getItem('token').length - 1));
+    return headers ;
   }
 }
