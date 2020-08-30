@@ -7,6 +7,7 @@ import { ROUTES } from 'app/layouts/patient-layout/components/patient-sidebar/pa
 
 import { Router } from '@angular/router';
 import { Location} from '@angular/common';
+import { User } from '../../../../../../../medicalCouchSite/src/app/models/user';
 
 @Component({
     moduleId: module.id,
@@ -21,6 +22,7 @@ export class PatientNavbarComponent implements OnInit{
     private nativeElement: Node;
     private toggleButton;
     private sidebarVisible: boolean;
+    user: User;
 
     public isCollapsed = true;
     @ViewChild("patient-navbar-cmp", {static: false}) button;
@@ -29,6 +31,7 @@ export class PatientNavbarComponent implements OnInit{
         this.location = location;
         this.nativeElement = element.nativeElement;
         this.sidebarVisible = false;
+        this.getUser() ;
     }
 
     ngOnInit(){
@@ -96,6 +99,11 @@ export class PatientNavbarComponent implements OnInit{
           navbar.classList.remove('bg-white');
         }
 
+      }
+
+
+      getUser() {
+        this.user = JSON.parse(localStorage.getItem('user')) ;
       }
 
 }
