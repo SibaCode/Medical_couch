@@ -3535,7 +3535,7 @@ NOTE: use percentage font sizes or else old IE chokes
   .show > .fc button.dropdown-toggle,
   .show > .fc button.dropdown-toggle:focus,
   .show > .fc button.dropdown-toggle:hover {
-    background-color: #403D39 !important;
+    background-color: #51cbce !important;
     color: #FFFFFF !important;
     box-shadow: none !important; }
   .fc button:not([data-action]):hover {
@@ -3554,14 +3554,14 @@ NOTE: use percentage font sizes or else old IE chokes
     border-color: #66615B; }
     .fc button.btn-simple:hover, .fc button.btn-simple:focus, .fc button.btn-simple:active {
       background-color: transparent;
-      color: #403D39;
-      border-color: #403D39;
+      color: #51cbce;
+      border-color: #51cbce;
       box-shadow: none; }
   .fc button.btn-link {
     color: #66615B; }
     .fc button.btn-link:hover, .fc button.btn-link:focus, .fc button.btn-link:active, .fc button.btn-link:active:focus {
       background-color: transparent;
-      color: #403D39;
+      color: #51cbce;
       text-decoration: none;
       box-shadow: none; }
   .fc button:hover, .fc button:focus {
@@ -4829,7 +4829,7 @@ License - nucleoapp.com/license/
   .navbar .navbar-nav > a.btn.dropdown-toggle:focus,
   .show >
   .navbar .navbar-nav > a.btn.dropdown-toggle:hover {
-    background-color: #403D39 !important;
+    background-color: #51cbce !important;
     color: #FFFFFF !important;
     box-shadow: none !important; }
   .btn:not([data-action]):hover,
@@ -4883,8 +4883,8 @@ License - nucleoapp.com/license/
     .navbar .navbar-nav > a.btn.btn-simple:focus,
     .navbar .navbar-nav > a.btn.btn-simple:active {
       background-color: transparent;
-      color: #403D39;
-      border-color: #403D39;
+      color: #51cbce;
+      border-color: #51cbce;
       box-shadow: none; }
   .btn.btn-link,
   .navbar .navbar-nav > a.btn.btn-link {
@@ -4895,7 +4895,7 @@ License - nucleoapp.com/license/
     .navbar .navbar-nav > a.btn.btn-link:active,
     .navbar .navbar-nav > a.btn.btn-link:active:focus {
       background-color: transparent;
-      color: #403D39;
+      color: #51cbce;
       text-decoration: none;
       box-shadow: none; }
   .btn:hover, .btn:focus,
@@ -5346,7 +5346,7 @@ License - nucleoapp.com/license/
     background-color: transparent !important;
     border-color: #FFFFFF !important; }
   .btn-outline-neutral:hover, .btn-outline-neutral:focus {
-    color: #403D39;
+    color: #51cbce;
     background-color: #FFFFFF; }
 
 .btn-neutral {
@@ -5390,7 +5390,7 @@ License - nucleoapp.com/license/
   .btn-neutral.btn-default {
     color: #66615B !important; }
     .btn-neutral.btn-default:hover, .btn-neutral.btn-default:focus, .btn-neutral.btn-default:active, .btn-neutral.btn-default:active:focus {
-      color: #403D39 !important; }
+      color: #51cbce !important; }
   .btn-neutral.active, .btn-neutral:active, .btn-neutral:active:focus, .btn-neutral:active:hover, .btn-neutral.active:focus, .btn-neutral.active:hover,
   .show > .btn-neutral.dropdown-toggle,
   .show > .btn-neutral.dropdown-toggle:focus,
@@ -5418,7 +5418,7 @@ License - nucleoapp.com/license/
       text-decoration: none;
       box-shadow: none; }
   .btn-neutral:hover, .btn-neutral:focus {
-    color: #403D39; }
+    color: #51cbce; }
   .btn-neutral.btn-border:hover, .btn-neutral.btn-border:focus {
     color: #66615B; }
   .btn-neutral.btn-border:active, .btn-neutral.btn-border.active,
@@ -9500,7 +9500,7 @@ img {
   .card-pricing .btn-neutral {
     color: #66615B; }
     .card-pricing .btn-neutral:hover, .card-pricing .btn-neutral :focus {
-      color: #403D39; }
+      color: #51cbce; }
   .card-pricing.card-background-image ul li {
     color: #FFFFFF;
     text-align: center;

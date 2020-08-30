@@ -12,7 +12,7 @@ import { ProfileComponent } from '../../pages/PatientDashboard/profile/profile.c
 // import { UpgradeComponent } from '../../pages/upgrade/upgrade.component';
 
 export const PatientLayoutRoutes: Routes = [
-    { path: '',      component: DashboardComponent },
+    { path: 'dashboard',      component: DashboardComponent },
     { path: 'booking',           component: BookingComponent },
     { path: 'appointments',          component: AppointmentsComponent },
     { path: 'profile',     component: ProfileComponent},

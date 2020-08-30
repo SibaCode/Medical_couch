@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import Swal from 'sweetalert2'
 @Component({
   selector: 'app-appointments',
   templateUrl: './appointments.component.html',
@@ -11,5 +11,13 @@ export class AppointmentsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  cancel() {
 
+    Swal.fire({
+  title: 'Error!',
+  text: 'Do you want to continue',
+  icon: 'error',
+  confirmButtonText: 'Cool'
+})
+  }
 }
