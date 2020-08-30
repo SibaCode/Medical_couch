@@ -25,8 +25,8 @@ export class LoginComponent implements OnInit {
   login() {
 
     this.auth.loginPatient(this.loginForm.value).subscribe( (res: UserResponse) => {
-        localStorage.setItem('user', JSON.stringify(res.data.user )) ; 
-        this.route.navigate(['/dashboard'])
+        localStorage.setItem('user', JSON.stringify(res.data.user )) ;
+        this.route.navigate(['/patient'])
 
     }, (error) => {
       console.log(error.error.message);
@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
       )
       // error handle here
     })
-    console.log(this.loginForm.value); 
+    console.log(this.loginForm.value);
   }
 
 }
