@@ -15,7 +15,7 @@ export class ProfileComponent implements OnInit {
 
   constructor(private fb: FormBuilder , private patServ: PatientService) {
     this.user = JSON.parse(localStorage.getItem('user')) ;;
-    this.user= "sbdua" ;
+    this.user.idLoc= "sbdua" ;
     this.userForm = fb.group(this.user)
  }
 
