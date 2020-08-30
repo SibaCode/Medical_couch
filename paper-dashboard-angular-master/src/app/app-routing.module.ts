@@ -5,6 +5,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PatientLayoutComponent } from './layouts/patient-layout/patient-layout.component';
+import { DoctorLayoutComponent } from './layouts/doctor-layout/doctor-layout.component';
 
 // import { DashboardComponent } from './pages/PatientDashboard/dashboard/dashboard.component';
 // import { BookingComponent } from './pages/PatientDashboard/booking/booking.component';
@@ -14,17 +15,24 @@ import { PatientLayoutComponent } from './layouts/patient-layout/patient-layout.
 // import { ProfileComponent } from './pages/PatientDashboard/profile/profile.component';
 
 const routes: Routes = [
-   { path: 'home', component: HomeComponent },
+   { path: '', component: HomeComponent },
    { path: 'login', component: LoginComponent },
   // { path: 'forgot-password', component: ForgotPasswordComponent },
    { path: 'register', component: RegisterComponent },
-  {  path: '',
+  {  path: 'patient',
      component: PatientLayoutComponent,
      children: [
          {
        path: '',
        loadChildren: './layouts/patient-layout/patient-layout.module#PatientLayoutModule'
    }]},
+   {  path: 'doctor',
+      component: DoctorLayoutComponent,
+      children: [
+          {
+        path: '',
+        loadChildren: './layouts/doctor-layout/doctor-layout.module#DoctorLayoutModule'
+    }]},
   // { path: 'dashboard', component: DashboardComponent },
   // { path: 'booking', component: BookingComponent },
   // { path: 'checkout', component: CheckoutComponent },

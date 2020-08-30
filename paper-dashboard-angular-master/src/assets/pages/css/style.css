@@ -129,3 +129,85 @@
 	background-color: rgba(2, 182, 179,0.12) !important;
 	color: #1db9aa !important;
 }
+/*-----------------
+	30. Profile Settings
+-----------------------*/
+
+.change-avatar {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.change-avatar .profile-img {
+	margin-right: 15px;
+}
+.change-avatar .profile-img img {
+    border-radius: 4px;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+.change-avatar .change-photo-btn {
+    margin: 0 0 10px;
+    width: 150px;
+}
+.widget-profile.pat-widget-profile .profile-info-widget .booking-doc-img {
+	padding: 0;
+}
+.widget-profile.pat-widget-profile .profile-info-widget .booking-doc-img img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+.bg-danger-light {
+	background-color: rgba(242, 17, 54,0.12) !important;
+	color: #e63c3c !important;
+}
+.info-details {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.info-details li .title {
+    color: #272b41;
+    font-weight: 500;
+}
+.info-details li .text {
+    color: #757575;
+    display: block;
+    font-size: 16px;
+    overflow: hidden;
+}
+.info-details li {
+	margin-bottom: 10px;
+}
+.info-details li:last-child {
+	margin-bottom: 0;
+}
+.upload-images {
+    position: relative;
+    width: 80px;
+}
+.upload-images img {
+	border-radius: 4px;
+	height: 80px;
+	width: auto;
+}
+.upload-wrap {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.upload-wrap .upload-images + .upload-images {
+	margin-left: 20px;
+}
+.dropzone .dz-preview.dz-error:hover .dz-error-message {
+	display: none;
+}
+.dropzone {
+    background-color: #fbfbfb;
+    border: 2px dashed rgba(0, 0, 0, 0.1);
+}

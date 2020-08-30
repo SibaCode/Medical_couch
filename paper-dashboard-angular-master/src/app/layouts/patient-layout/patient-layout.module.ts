@@ -4,8 +4,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { PatientLayoutRoutes } from './patient-layout.routing';
-
-import { DashboardComponent }       from '../../pages/dashboard/dashboard.component';
+// import { DashboardComponent }       from '../../pages/dashboard/dashboard.component';
+// import { AppointmentsComponent } from '../../pages/PatientDashboard/appointments/appointments.component';
+// import { ProfileComponent } from '../../pages/PatientDashboard/profile/profile.component';
 // import { UserComponent }            from '../../pages/user/user.component';
 // import { TableComponent }           from '../../pages/table/table.component';
 // import { TypographyComponent }      from '../../pages/typography/typography.component';
@@ -26,7 +27,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule
   ],
   declarations: [
-    DashboardComponent,
+    // DashboardComponent,
+    // AppointmentsComponent,
+    // ProfileComponent
+
     // PatientSidebarComponent,
     // PatientNavbarComponent,
     // UserComponent,

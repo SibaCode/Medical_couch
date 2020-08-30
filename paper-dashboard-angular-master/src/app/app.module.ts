@@ -5,10 +5,13 @@ import { ToastrModule } from "ngx-toastr";
 
 import { SidebarModule } from './layouts/admin-layout/components/sidebar/sidebar.module';
 import { PatientSidebarModule} from './layouts/patient-layout/components/patient-sidebar/patient-sidebar.module';
+import { DoctorSidebarModule} from './layouts/doctor-layout/components/doctor-sidebar/doctor-sidebar.module';
 
 import { FooterModule } from './shared/footer/footer.module';
 import { NavbarModule} from './layouts/patient-layout/components/navbar/navbar.module';
 import { PatientNavbarModule} from './layouts/patient-layout/components/patient-navbar/patient-navbar.module';
+import { DoctorNavbarModule} from './layouts/doctor-layout/components/doctor-navbar/doctor-navbar.module';
+
 import { FixedPluginModule} from './shared/fixedplugin/fixedplugin.module';
 
 import { AppComponent } from './app.component';
@@ -25,6 +28,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppointmentsComponent } from './pages/PatientDashboard/appointments/appointments.component';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ProfileComponent } from './pages/PatientDashboard/profile/profile.component';
+import { PracticeProfileComponent } from './pages/DoctorDashboard/practice-profile/practice-profile.component';
+import { DoctorLayoutComponent } from './layouts/doctor-layout/doctor-layout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +42,10 @@ import { AppointmentsComponent } from './pages/PatientDashboard/appointments/app
     LoginComponent,
     HomeComponent,
     RegisterComponent,
-    AppointmentsComponent
+    AppointmentsComponent,
+    ProfileComponent,
+    PracticeProfileComponent,
+    DoctorLayoutComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -49,7 +59,10 @@ import { AppointmentsComponent } from './pages/PatientDashboard/appointments/app
     FooterModule,
     FixedPluginModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    DoctorSidebarModule,
+    DoctorNavbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

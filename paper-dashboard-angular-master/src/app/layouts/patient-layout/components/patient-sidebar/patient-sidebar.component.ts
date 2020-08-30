@@ -9,13 +9,13 @@ export interface RouteInfo {
 }
 
 export const ROUTES: RouteInfo[] = [
-    { path: '/dashboard',     title: 'Find Doctors',         icon:'nc-bank',       class: '' },
+    { path: '/patient/dashboard',     title: 'Find Doctors',         icon:'nc-bank',       class: '' },
     // { path: '/booking',       title: 'Make Booking',         icon:'nc-bank',    class: '' },
-    { path: '/appointments',          title: 'Appointments ',      icon:'nc-single-02',  class: '' },
-    { path: '/profile',          title: 'User Profile',      icon:'nc-single-02',  class: '' },
+    { path: '/patient/appointments',          title: 'Appointments ',      icon:'nc-single-02',  class: '' },
+    { path: '/patient/profile',          title: 'User Profile',      icon:'nc-single-02',  class: '' },
     { path: '/login',          title: 'Login',      icon:'nc-single-02',  class: '' },
 ];
-@Component({
+@Component({ 
   // selector: 'app-patient-sidebar',
   selector: 'patient-sidebar-cmp',
   templateUrl: './patient-sidebar.component.html',
