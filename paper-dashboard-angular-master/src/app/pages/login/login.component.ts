@@ -38,12 +38,12 @@ export class LoginComponent implements OnInit {
             toast.addEventListener('mouseleave', Swal.resumeTimer)
           }
         })
-        
+
         Toast.fire({
           icon: 'success',
           title: 'Signed in successfully'
         })
-        this.route.navigate(['/patient'])
+        this.route.navigate(['/patient/dashboard'])
 
     }, (error) => {
       console.log(error.error.message);

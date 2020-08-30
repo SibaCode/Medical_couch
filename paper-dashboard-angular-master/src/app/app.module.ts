@@ -32,6 +32,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ProfileComponent } from './pages/PatientDashboard/profile/profile.component';
 import { PracticeProfileComponent } from './pages/DoctorDashboard/practice-profile/practice-profile.component';
 import { DoctorLayoutComponent } from './layouts/doctor-layout/doctor-layout.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,7 +64,8 @@ import { DoctorLayoutComponent } from './layouts/doctor-layout/doctor-layout.com
     HttpClientModule,
     NgbModule,
     DoctorSidebarModule,
-    DoctorNavbarModule
+    DoctorNavbarModule,
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory })
   ],
   providers: [],
   bootstrap: [AppComponent]

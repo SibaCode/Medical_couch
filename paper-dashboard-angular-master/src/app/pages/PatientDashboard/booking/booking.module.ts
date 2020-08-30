@@ -4,7 +4,7 @@ import { BookingComponent } from './booking.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import Stepper from 'bs-stepper'
 @NgModule({
   declarations: [BookingComponent],
   imports: [
