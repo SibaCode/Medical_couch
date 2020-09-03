@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MedicalCouchWebsiteVersion2</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<!-- Vendor CSS Files -->
+<link href="assets/website/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/website/vendor/icofont/icofont.min.css" rel="stylesheet">
+<link href="assets/website/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="assets/website/vendor/animate.css/animate.min.css" rel="stylesheet">
+<link href="assets/website/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="assets/website/vendor/venobox/venobox.css" rel="stylesheet">
+<link href="assets/website/vendor/aos/aos.css" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link href="assets/website/css/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/dashboard/css/bootstrap.min.css">
+
+<!-- Fontawesome CSS -->
+<link rel="stylesheet" href="assets/dashboard/plugins/fontawesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="assets/dashboard/plugins/fontawesome/css/all.min.css">
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="assets/dashboard/css/style.css">
+</head>
+<body>
+  <app-root></app-root>
+  <!-- Vendor JS Files -->
+<script src="assets/website/vendor/jquery/jquery.min.js"></script>
+<script src="assets/website/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/website/vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="assets/website/vendor/php-email-form/validate.js"></script>
+<script src="assets/website/vendor/waypoints/jquery.waypoints.min.js"></script>
+<script src="assets/website/vendor/counterup/counterup.min.js"></script>
+<script src="assets/website/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="assets/website/vendor/venobox/venobox.min.js"></script>
+<script src="assets/website/vendor/aos/aos.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/website/js/main.js"></script>
+<script>
+var TxtType = function (el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function () {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+    var that = this;
+    var delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) {
+        delta /= 2;
+    }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+    }
+
+    setTimeout(function () {
+        that.tick();
+    }, delta);
+};
+
+
+window.onload = function () {
+    var elements = document.getElementsByClassName('typewrite');
+    for (var i = 0; i < elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-type');
+        var
+            period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+            new TxtType(elements[i], JSON.parse(toRotate),
+                period);
+        }
+    }
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+    document.body.appendChild(css);
+};
+
+
+//lOGIN /rEG fORM
+$('.message a').click(function () {
+    $('form').animate({
+        height: "toggle",
+        opacity: "toggle"
+    }, "slow");
+});
+</script>
+<script src="assets/dashboard/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JS -->
+<script src="assets/dashboard/js/popper.min.js"></script>
+<script src="assets/dashboard/js/bootstrap.min.js"></script>
+
+<!-- Custom JS -->
+<script src="assets/dashboard/js/script.js"></script>
+
+</body>
+
+<!-- doccure/login.html  30 Nov 2019 04:12:20 GMT -->
+</html>
