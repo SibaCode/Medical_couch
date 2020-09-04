@@ -26,21 +26,22 @@
             </a>
           </div>
           <ul class="main-nav" style="margin-left: auto;">
-            <li class="has-submenu">
-              <a >Appointments <i class="fas fa-chevron-down"></i></a>
-              <ul class="submenu">
-                <li><a> Current</a></li>
-                <li><a>Expired</a></li>
-                <!-- <li><a>Pharmacy </a></li> -->
-              </ul>
+            <li class="active">
+              <a  routerLink="/patient/dashboard">Find Doctors </a>
             </li>
             <li>
-              <a >Profile </a>
+              <a  routerLink="/patient/appointments">Appointments </a>
+            </li>
+            <li>
+              <a routerLink="/patient/prescriptions">Prescriptions </a>
+            </li>
+            <li>
+              <a  routerLink="/profile">Profile </a>
             </li>
 
 
             <li >
-              <a routerLink="/login">Logout </a>
+              <a routerLink="logout()">Logout </a>
             </li>
           </ul>
         </div>

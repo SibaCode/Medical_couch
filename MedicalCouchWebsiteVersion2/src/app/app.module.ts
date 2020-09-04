@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './website/home/home.component';
 import { LoginComponent } from './website/login/login.component';
 import { PatientLayoutComponent } from './layouts/patient-layout/patient-layout.component';
+import { PharmacyComponent } from './website/pharmacy/pharmacy.component';
+import { DoctorComponent } from './website/doctor/doctor.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { PatientLayoutComponent } from './layouts/patient-layout/patient-layout.
     HomeComponent,
     LoginComponent,
     PatientLayoutComponent,
+    PharmacyComponent,
+    DoctorComponent,
   ],
   imports: [
     BrowserModule,

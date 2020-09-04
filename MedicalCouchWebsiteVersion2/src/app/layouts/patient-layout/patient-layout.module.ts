@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 
 import { PatientLayoutRoutes } from './patient-layout.routing';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AppointmentsComponent } from './appointments/appointments.component';
+import { PrescriptionsComponent } from './prescriptions/prescriptions.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -14,6 +16,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   ],
   declarations: [
     DashboardComponent,
+    AppointmentsComponent,
+    PrescriptionsComponent,
   
   ]
 })

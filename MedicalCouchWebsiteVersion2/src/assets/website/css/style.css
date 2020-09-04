@@ -8,6 +8,77 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+.banner_area {
+  position: relative;
+  z-index: 1;
+  min-height: 470px;
+}
+
+.banner_area .banner_inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 470px;
+
+  background-size: auto;
+  z-index: 1;
+}
+
+.banner_area .banner_inner .overlay {
+  background: rgba(0, 0, 0, 0.42);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.banner_area .banner_inner .banner_content {
+  position: relative;
+  z-index: 10;
+}
+
+.banner_area .banner_inner .banner_content h2 {
+  color: #ffffff;
+  font-size: 48px;
+    font-family: "Poppins",sans-serif;
+  margin-bottom: 12px;
+  font-weight: 500;
+  margin-top: 120px;
+}
+
+.banner_area .banner_inner .banner_content .page_link a {
+  font-size: 14px;
+  color: #ffffff;
+    font-family: "Poppins",sans-serif;
+  margin-right: 32px;
+  position: relative;
+}
+
+.banner_area .banner_inner .banner_content .page_link a:before {
+  content: "\e87a";
+  font-family: 'Linearicons-Free';
+  font-size: 14px;
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.banner_area .banner_inner .banner_content .page_link a:last-child {
+  margin-right: 0px;
+}
+
+.banner_area .banner_inner .banner_content .page_link a:last-child:before {
+  display: none;
+}
+
+.banner_area .banner_inner .banner_content .page_link a:hover {
+  color: #0aaad8;
+}
+
+
 body {
   font-family: 'Poppins', sans-serif;
   color: #444444;
@@ -116,7 +187,15 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   min-height: 900px;
 }
-
+.website_banner_area .banner_inner {
+  position: relative;
+  width: 100%;
+  min-height: 150px;
+}
+.website_banner_area .banner_inner .banner_content  h2{
+  color: #fff;
+  font-size:50px;
+}
 .home_banner_area .banner_inner .banner_content {
   color: #000000;
   padding-top: 0px;

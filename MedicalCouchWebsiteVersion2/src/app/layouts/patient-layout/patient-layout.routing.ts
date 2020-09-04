@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AppointmentsComponent } from './appointments/appointments.component';
+import { PrescriptionsComponent } from './prescriptions/prescriptions.component';
 // import { BookingComponent } from '../../pages/PatientDashboard/booking/booking.component';
 // import { AppointmentsComponent } from '../../pages/PatientDashboard/appointments/appointments.component';
 // import { ProfileComponent } from '../../pages/PatientDashboard/profile/profile.component';
@@ -12,7 +14,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 // import { UpgradeComponent } from '../../pages/upgrade/upgrade.component';
 
 export const PatientLayoutRoutes: Routes = [
+  { path: '',      component: DashboardComponent },
+
     { path: 'dashboard',      component: DashboardComponent },
+    { path: 'appointments',      component: AppointmentsComponent },
+    { path: 'prescriptions',      component: PrescriptionsComponent },
     // { path: 'booking',           component: BookingComponent },
     // { path: 'appointments',          component: AppointmentsComponent },
     // { path: 'profile',     component: ProfileComponent},
