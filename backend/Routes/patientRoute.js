@@ -24,6 +24,15 @@ patientRoute.patch("/", auth , async(req, res) => {
   
     res.status(result.status).send(result);
 });
+
+
+// add Review
+patientRoute.post("/review" , auth , async(req, res) => {
+    
+    result = await patientController.addReview(req.body);
+  
+    res.status(result.status).send(result);
+});
   
 
 
