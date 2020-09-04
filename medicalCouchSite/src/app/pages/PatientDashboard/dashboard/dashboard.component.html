@@ -32,26 +32,21 @@
 				<ul class="nav user-menu">
 
 
+          <!-- User Menu -->
+          <li class="nav-item dropdown has-arrow">
 
-					<!-- User Menu -->
-					<li class="nav-item dropdown has-arrow">
-						<a  class="dropdown-toggle nav-link" data-toggle="dropdown">
-							<span class="user-img"><img class="rounded-circle" src="assets/images/doctors/Doctor-01.jpeg" width="31" alt=""></span>
-						</a>
-						<div class="dropdown-menu">
-							<div class="user-header">
-								<div class="avatar avatar-sm">
-									<img src="assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle">
-								</div>
-								<div class="user-text">
-									<h6>Sibahle Mvubu</h6>
-									<p class="text-muted mb-0">Administrator</p>
-								</div>
-							</div>
-							<a class="dropdown-item" routerLink="/home">Logout</a>
-						</div>
-					</li>
-					<!-- /User Menu -->
+            <div class="dropdown-menu">
+              <div class="user-header">
+
+                <div class="user-text">
+                  <h6>Sibahle Mvubu</h6>
+                  <p class="text-muted mb-0">Administrator</p>
+                </div>
+              </div>
+              <a class="dropdown-item" routerLink="/home">Logout</a>
+            </div>
+          </li>
+          <!-- /User Menu -->
 
 				</ul>
 				<!-- /Header Right Menu -->
@@ -99,12 +94,14 @@
 						</div>
 					</div>
 					<!-- /Page Header -->
+          <div class="">
+        				<div class="">
+        					<div class="row">
 
-          <div class="row">
-          <div class="col-xl-12 col-sm-6 col-12">
+        						<div class="col-md-12 col-lg-12 col-xl-12" >
         							<div class="row row-grid">
-        								<div class="col-md-6 col-lg-4 col-xl-3">
-        									<div class="profile-widget">
+        								<div class="col-md-6 col-lg-4 col-xl-3" *ngFor="let practice of practices">
+                          <div class="profile-widget">
         										<div class="doc-img">
         											<a>
         												<img class="img-fluid" alt="User Image" src="assets/images/doctors/Doctor-01.jpeg">
@@ -115,7 +112,7 @@
         										</div>
         										<div class="pro-content">
         											<h3 class="title">
-        												<a >Sibusiso Jiyane</a>
+        												<a >Dr {{ practice.Dr_surname }}</a>
         												<!-- <i class="fas fa-check-circle verified"></i> -->
         											</h3>
         											<!-- <p class="speciality">MDS - Periodontology and Oral Implantology, BDS</p> -->
@@ -129,32 +126,33 @@
         											</div>
         											<ul class="available-info">
         												<li>
-        													<i class="fas fa-map-marker-alt"></i> Pretoria, SA
+        													<i class="fas fa-map-marker-alt"></i> {{ practice.practice_address}}
         												</li>
         												<li>
-        													<i class="fas fa-phone-alt"></i> 061 1258 845
+        													<i class="fas fa-phone-alt"></i> {{practice.number}}
         												</li>
         												<li>
         													<!-- <i class="fas fa-li"></i> $300 - $1000 <i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i> -->
         												</li>
         											</ul>
         											<div class="row row-sm">
-        												<div class="col-6">
-        													<a routerLink="/doctor-profile" class="btn view-btn btn-block btn-outline-primary active">View Profile</a>
-        												</div>
-        												<div class="col-6">
-        													<a routerLink="/booking"class="btn book-btn btn-block btn-outline-primary">Book Now</a>
+
+        												<div class="col-12">
+        													<a routerLink="/booking"class="btn book-btn btn-block btn-outline-primary active">Book Now</a>
         												</div>
         											</div>
         										</div>
         									</div>
         								</div>
 
-
-
         							</div>
         						</div>
-                    </div>
+        					</div>
+        				</div>
+
+        			</div>
+
+
 
 				</div>
 			</div>

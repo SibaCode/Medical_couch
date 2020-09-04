@@ -14,6 +14,13 @@ import { DoctorProfileComponent } from './pages/PatientDashboard/doctor-profile/
 import { ProfileComponent } from './pages/PatientDashboard/profile/profile.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AppointmentsComponent } from './pages/PatientDashboard/appointments/appointments.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { DoctorInfoComponent } from './pages/doctor-info/doctor-info.component';
+import { PatientInfoComponent } from './pages/patient-info/patient-info.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,10 +35,18 @@ import { AppointmentsComponent } from './pages/PatientDashboard/appointments/app
     ProfileComponent,
     HomeComponent,
     AppointmentsComponent,
+    DoctorInfoComponent,
+    PatientInfoComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule,
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory })
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,6 +4,7 @@ let query = require('./queryFunction'); // requires queryFunction file
 let email = require('./sendEmail'); // requires sendEmail file
 let trim = require('./trimObjValues'); // requires trimObjValues file
 let { validate , validate2 } = require('./validate'); // requires validate file
+let upload = require('./upload')
 
 module.exports = {
     generateToken: auth.generateToken,
@@ -16,6 +17,6 @@ module.exports = {
     trimString: trim.trimString,
     validate: validate,
     validate2: validate2 ,
-    log: console.log
-    
+    log: console.log,
+    upload: upload
 }
