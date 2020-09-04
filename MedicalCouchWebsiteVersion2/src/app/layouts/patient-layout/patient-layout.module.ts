@@ -7,6 +7,7 @@ import { PatientLayoutRoutes } from './patient-layout.routing';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppointmentsComponent } from './appointments/appointments.component';
 import { PrescriptionsComponent } from './prescriptions/prescriptions.component';
+import { ProfileComponent } from './profile/profile.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -18,6 +19,7 @@ import { PrescriptionsComponent } from './prescriptions/prescriptions.component'
     DashboardComponent,
     AppointmentsComponent,
     PrescriptionsComponent,
+    ProfileComponent,
   
   ]
 })

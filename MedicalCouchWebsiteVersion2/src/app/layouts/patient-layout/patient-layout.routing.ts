@@ -5,7 +5,7 @@ import { AppointmentsComponent } from './appointments/appointments.component';
 import { PrescriptionsComponent } from './prescriptions/prescriptions.component';
 // import { BookingComponent } from '../../pages/PatientDashboard/booking/booking.component';
 // import { AppointmentsComponent } from '../../pages/PatientDashboard/appointments/appointments.component';
-// import { ProfileComponent } from '../../pages/PatientDashboard/profile/profile.component';
+import { ProfileComponent } from './profile/profile.component';
 // import { TableComponent } from '../../pages/table/table.component';
 // import { TypographyComponent } from '../../pages/typography/typography.component';
 // import { IconsComponent } from '../../pages/icons/icons.component';
@@ -21,7 +21,7 @@ export const PatientLayoutRoutes: Routes = [
     { path: 'prescriptions',      component: PrescriptionsComponent },
     // { path: 'booking',           component: BookingComponent },
     // { path: 'appointments',          component: AppointmentsComponent },
-    // { path: 'profile',     component: ProfileComponent},
+    { path: 'profile',     component: ProfileComponent},
     // { path: 'table',          component: TableComponent },
     // { path: 'typography',     component: TypographyComponent },
     // { path: 'icons',          component: IconsComponent },
