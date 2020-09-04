@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DoctorService } from '../../../services/doctor.service';
+import { PracticeResponse, Practice } from '../../../models/practice';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  practices: Practice[] ;
+  constructor(private doctor: DoctorService) { }
 
   ngOnInit() {
+    this.doctor.getPractices().subscribe( (res: PracticeResponse) => {
+      this.practices = res.data ;
+
+    }, (err) => {
+      // Handle error here
+    })
   }
 
 }
