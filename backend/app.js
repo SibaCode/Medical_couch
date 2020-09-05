@@ -3,6 +3,7 @@ const app = express();
 const doctor = require("./Routes/doctorRoute");
 const patient = require("./Routes/patientRoute");
 const appoint = require("./Routes/appointmentsRoute");
+const review = require('./Routes/reviewRoute');
 const aid = require("./Routes/aidRoute");
 const cors = require("cors");
 let morgan = require("morgan");
@@ -55,7 +56,8 @@ app.post('/uploadfile', upload.single('myFile'), (req, res, next) => {
 app.use("/api/v1/doctor", doctor);
 app.use("/api/v1/patient", patient);
 app.use("/api/v1/appointment", appoint);
-app.use("/api/v1/aid", aid)
+app.use("/api/v1/aid", aid);
+app.use("/api/v1/review", review)
 
 // default route
 app.use("/", (req, res, next) => {
