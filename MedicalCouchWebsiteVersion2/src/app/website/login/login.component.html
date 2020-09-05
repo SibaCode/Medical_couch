@@ -13,13 +13,27 @@
 								<div class="row align-items-center justify-content-center">
 									<!-- -->
 									<div class="col-md-12 col-lg-6 login-right">
-										<div class="col-md-12 col-lg-12 align-items-center justify-content-center">
-											<img src="assets/website/img/logo.png" class="img-fluid" style="width:100px;">
-										</div>
-										<div class="login-header">
-											<h3>Login </h3>
-										</div>
+
+
 										<form [formGroup]="loginForm" (ngSubmit)="login()" >
+											<span class="login100-form-logo">
+							          <img src="assets/website/img/logo.png" class="img-fluid-login" alt="Logo">
+							        </span>
+											<div class="login-header" >
+												<h3>Login </h3>
+											</div>
+											<div class="row row-sm" style=" padding-top: 10px;margin-right: -3px;    margin-left: 1px;">
+												<div class="col-4">
+													<a routerLink="/patient/doctor-profile"class="btn book-btn btn-block btn-outline-primary  active">Patient</a>
+												</div>
+												<div class="col-4">
+													<a routerLink="/patient/booking"class="btn book-btn btn-block btn-outline-primary active">Doctor</a>
+												</div>
+												<div class="col-4">
+													<a routerLink="/patient/booking"class="btn book-btn btn-block btn-outline-primary active">Pharmacy </a>
+												</div>
+											</div>
+											<hr>
                     <div class="info-widget">
 
                     <div class="col-12 col-md-12">
