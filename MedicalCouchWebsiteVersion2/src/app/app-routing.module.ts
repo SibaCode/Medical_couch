@@ -6,9 +6,9 @@ import { PatientLayoutComponent } from './layouts/patient-layout/patient-layout.
 import { PharmacyComponent } from './website/pharmacy/pharmacy.component';
 import { DoctorComponent } from './website/doctor/doctor.component';
 import { ForgotPasswordComponent } from './website/forgot-password/forgot-password.component';
+import { DoctorLayoutComponent } from './layouts/doctor-layout/doctor-layout.component';
+import { PharmacyLayoutComponent } from './layouts/pharmacy-layout/pharmacy-layout.component';
 
-// import { PatientLayoutModule } from './layouts/patient-layout/patient-layout.component';
-// dr-profile , for pass, reg ,
 
 const routes: Routes = [
   {path:'' , component:HomeComponent},
@@ -25,7 +25,20 @@ const routes: Routes = [
                  m => m.PatientLayoutModule
              ),
      },
-
+     {  path: 'doctor',
+          component: DoctorLayoutComponent,
+          children: [
+              {
+            path: '',
+            loadChildren: './layouts/doctor-layout/doctor-layout.module#DoctorLayoutModule'
+        }]},
+        {  path: 'pharmacy',
+             component: PharmacyLayoutComponent,
+             children: [
+                 {
+               path: '',
+               loadChildren: './layouts/pharmacy-layout/pharmacy-layout.module#PharmacyLayoutModule'
+           }]},
 
 ];
 

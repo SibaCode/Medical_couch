@@ -96,397 +96,127 @@
                   <div id="today_appointments" class="tab-pane fade show active">
                     <div class="card card-table mb-0">
                       <div class="card-body">
-                        <div class="table-responsive">
-                          <table class="table table-hover table-center mb-0">
-                            <thead>
-                              <tr>
-                                <th>Doctor</th>
-                                <th>Appt Date</th>
-                                <th>Practice Name  </th>
-                                <th>Address</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <h2 class="table-avatar">
-                                    <a  class="avatar avatar-sm mr-2">
-                                      <img class="avatar-img rounded-circle" src="assets/website/img/doctors/doctor1.jpeg" alt="User Image">
-                                    </a>
-                                    <a >Dr. S. Jiyane <span>General</span></a>
-                                  </h2>
-                                </td>
-                                <td>14 Nov 2020 <span class="d-block text-info">10.00 AM</span></td>
-                                <td>Pretoria Medical Centre</td>
-                                <td>11 Arcadia </td>
-                                <td><span class="badge badge-pill bg-success-light">Confirm</span></td>
-                                <td class="text-right">
-                                  <div class="table-action">
+                            <div class="table-responsive">
+                              <table class="table">
+                                <thead class=" text-primary">
+                                  <th>Doctors Name</th>
+                                  <th>Appt Date</th>
+                                  <th>Notes</th>
+                                  <th>Practice Name</th>
+                                  <th>Status</th>
+                                    <th>Action </th>
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let app of appointment">
+                                    <td>
+                                      {{app.doctor}}
+                                    </td>
+                                    <td>{{app.date}} <span class="d-block text-info">10.00 AM - 11-00 AM</span></td>
+                                    <td>{{ app.symptoms }}</td>
+                                    <td> {{app.pratice}}</td>
+                                    <td> <button type="button" class="btn bg-info-light btn-sm" id="topup_status">Completed</button></td>
+                                    <td> <button type="button" class="btn bg-info-light btn-sm" id="topup_status">Approved</button></td>
+                                    <td> <button type="button" class="btn bg-info-light btn-sm" id="topup_status">Pending</button></td>
+                                    <td> <button type="button" class="btn bg-danger-light btn-sm" id="topup_status">Cancel</button></td>
 
-                                    <a class="btn btn-sm bg-info-light">
-                                      <i class="far fa-pencil"></i> Edit
-                                    </a>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <h2 class="table-avatar">
-                                    <a  class="avatar avatar-sm mr-2">
-                                      <img class="avatar-img rounded-circle" src="assets/website/img/doctors/doctor1.jpeg" alt="User Image">
-                                    </a>
-                                    <a >Dr. S. Jiyane <span>General</span></a>
-                                  </h2>
-                                </td>
-                                <td>14 Nov 2020 <span class="d-block text-info">10.00 AM</span></td>
-                                <td>Pretoria Medical Centre</td>
-                                <td>11 Arcadia </td>
-                                <td><span class="badge badge-pill bg-success-light">Confirm</span></td>
-                                <td class="text-right">
-                                  <div class="table-action">
+                                    <td class="">
+                                      <div class="table-action">
+                                        <a class="btn btn-sm bg-info-light" routerLink="/patient/booking"><i class="fa fa-pencil"></i> Edit</a>
 
-                                    <a class="btn btn-sm bg-info-light">
-                                      <i class="far fa-pencil"></i> Edit
-                                    </a>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <h2 class="table-avatar">
-                                    <a  class="avatar avatar-sm mr-2">
-                                      <img class="avatar-img rounded-circle" src="assets/website/img/doctors/doctor1.jpeg" alt="User Image">
-                                    </a>
-                                    <a >Dr. S. Jiyane <span>General</span></a>
-                                  </h2>
-                                </td>
-                                <td>14 Nov 2020 <span class="d-block text-info">10.00 AM</span></td>
-                                <td>Pretoria Medical Centre</td>
-                                <td>11 Arcadia </td>
-                                <td><span class="badge badge-pill bg-danger-light">Cancelled</span></td>
-                                <td class="text-right">
-                                  <div class="table-action">
+                                      </div>
 
-                                    <a class="btn btn-sm bg-info-light">
-                                      <i class="far fa-pencil"></i> Edit
-                                    </a>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <h2 class="table-avatar">
-                                    <a  class="avatar avatar-sm mr-2">
-                                      <img class="avatar-img rounded-circle" src="assets/website/img/doctors/doctor1.jpeg" alt="User Image">
-                                    </a>
-                                    <a >Dr. S. Jiyane <span>General</span></a>
-                                  </h2>
-                                </td>
-                                <td>14 Nov 2020 <span class="d-block text-info">10.00 AM</span></td>
-                                <td>Pretoria Medical Centre</td>
-                                <td>11 Arcadia </td>
-                                <td><span class="badge badge-pill bg-warning-light">Pending</span></td>
-                                <td class="text-right">
-                                  <div class="table-action">
+                                    </td>
+                                  </tr>
 
-                                    <a class="btn btn-sm bg-info-light">
-                                      <i class="far fa-pencil"></i> Edit
-                                    </a>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <h2 class="table-avatar">
-                                    <a  class="avatar avatar-sm mr-2">
-                                      <img class="avatar-img rounded-circle" src="assets/website/img/doctors/doctor1.jpeg" alt="User Image">
-                                    </a>
-                                    <a >Dr. S. Jiyane <span>General</span></a>
-                                  </h2>
-                                </td>
-                                <td>14 Nov 2020 <span class="d-block text-info">10.00 AM</span></td>
-                                <td>Pretoria Medical Centre</td>
-                                <td>11 Arcadia </td>
-                                <td><span class="badge badge-pill bg-success-light">Confirm</span></td>
-                                <td class="text-right">
-                                  <div class="table-action">
 
-                                    <a class="btn btn-sm bg-info-light">
-                                      <i class="far fa-pencil"></i> Edit
-                                    </a>
-                                  </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
                     </div>
                   </div>
                   <div id="incoming_appointments" class="tab-pane fade">
                     <div class="card card-table mb-0">
                       <div class="card-body">
-                        <div class="table-responsive">
-                          <table class="table table-hover table-center mb-0">
-                            <thead>
-                              <tr>
-                                <th>Doctor</th>
-                                <th>Appt Date</th>
-                                <th>Practice Name  </th>
-                                <th>Address</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <h2 class="table-avatar">
-                                    <a  class="avatar avatar-sm mr-2">
-                                      <img class="avatar-img rounded-circle" src="assets/website/img/doctors/doctor1.jpeg" alt="User Image">
-                                    </a>
-                                    <a >Dr. S. Jiyane <span>General</span></a>
-                                  </h2>
-                                </td>
-                                <td>14 Nov 2020 <span class="d-block text-info">10.00 AM</span></td>
-                                <td>Pretoria Medical Centre</td>
-                                <td>11 Arcadia </td>
-                                <td><span class="badge badge-pill bg-success-light">Confirm</span></td>
-                                <td class="text-right">
-                                  <div class="table-action">
+                            <div class="table-responsive">
+                              <table class="table">
+                                <thead class=" text-primary">
+                                  <th>Doctors Name</th>
+                                  <th>Appt Date</th>
+                                  <th>Notes</th>
+                                  <th>Practice Name</th>
+                                  <th>Status</th>
+                                    <th>Action </th>
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let app of appointment">
+                                    <td>
+                                      {{app.doctor}}
+                                    </td>
+                                    <td>{{app.date}} <span class="d-block text-info">10.00 AM - 11-00 AM</span></td>
+                                    <td>{{ app.symptoms }}</td>
+                                    <td> {{app.pratice}}</td>
+                                    <td> <button type="button" class="btn bg-info-light btn-sm" id="topup_status">Completed</button></td>
+                                    <td> <button type="button" class="btn bg-info-light btn-sm" id="topup_status">Approved</button></td>
+                                    <td> <button type="button" class="btn bg-info-light btn-sm" id="topup_status">Pending</button></td>
+                                    <td> <button type="button" class="btn bg-danger-light btn-sm" id="topup_status">Cancel</button></td>
 
-                                    <a class="btn btn-sm bg-info-light">
-                                      <i class="far fa-pencil"></i> Edit
-                                    </a>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <h2 class="table-avatar">
-                                    <a  class="avatar avatar-sm mr-2">
-                                      <img class="avatar-img rounded-circle" src="assets/website/img/doctors/doctor1.jpeg" alt="User Image">
-                                    </a>
-                                    <a >Dr. S. Jiyane <span>General</span></a>
-                                  </h2>
-                                </td>
-                                <td>14 Nov 2020 <span class="d-block text-info">10.00 AM</span></td>
-                                <td>Pretoria Medical Centre</td>
-                                <td>11 Arcadia </td>
-                                <td><span class="badge badge-pill bg-success-light">Confirm</span></td>
-                                <td class="text-right">
-                                  <div class="table-action">
+                                    <td class="">
+                                      <div class="table-action">
+                                        <a class="btn btn-sm bg-info-light" routerLink="/patient/booking"><i class="fa fa-pencil"></i> Edit</a>
 
-                                    <a class="btn btn-sm bg-info-light">
-                                      <i class="far fa-pencil"></i> Edit
-                                    </a>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <h2 class="table-avatar">
-                                    <a  class="avatar avatar-sm mr-2">
-                                      <img class="avatar-img rounded-circle" src="assets/website/img/doctors/doctor1.jpeg" alt="User Image">
-                                    </a>
-                                    <a >Dr. S. Jiyane <span>General</span></a>
-                                  </h2>
-                                </td>
-                                <td>14 Nov 2020 <span class="d-block text-info">10.00 AM</span></td>
-                                <td>Pretoria Medical Centre</td>
-                                <td>11 Arcadia </td>
-                                <td><span class="badge badge-pill bg-danger-light">Cancelled</span></td>
-                                <td class="text-right">
-                                  <div class="table-action">
+                                      </div>
 
-                                    <a class="btn btn-sm bg-info-light">
-                                      <i class="far fa-pencil"></i> Edit
-                                    </a>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <h2 class="table-avatar">
-                                    <a  class="avatar avatar-sm mr-2">
-                                      <img class="avatar-img rounded-circle" src="assets/website/img/doctors/doctor1.jpeg" alt="User Image">
-                                    </a>
-                                    <a >Dr. S. Jiyane <span>General</span></a>
-                                  </h2>
-                                </td>
-                                <td>14 Nov 2020 <span class="d-block text-info">10.00 AM</span></td>
-                                <td>Pretoria Medical Centre</td>
-                                <td>11 Arcadia </td>
-                                <td><span class="badge badge-pill bg-warning-light">Pending</span></td>
-                                <td class="text-right">
-                                  <div class="table-action">
+                                    </td>
+                                  </tr>
 
-                                    <a class="btn btn-sm bg-info-light">
-                                      <i class="far fa-pencil"></i> Edit
-                                    </a>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <h2 class="table-avatar">
-                                    <a  class="avatar avatar-sm mr-2">
-                                      <img class="avatar-img rounded-circle" src="assets/website/img/doctors/doctor1.jpeg" alt="User Image">
-                                    </a>
-                                    <a >Dr. S. Jiyane <span>General</span></a>
-                                  </h2>
-                                </td>
-                                <td>14 Nov 2020 <span class="d-block text-info">10.00 AM</span></td>
-                                <td>Pretoria Medical Centre</td>
-                                <td>11 Arcadia </td>
-                                <td><span class="badge badge-pill bg-success-light">Confirm</span></td>
-                                <td class="text-right">
-                                  <div class="table-action">
 
-                                    <a class="btn btn-sm bg-info-light">
-                                      <i class="far fa-pencil"></i> Edit
-                                    </a>
-                                  </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
                     </div>
                   </div>
                   <div id="expired_appointments" class="tab-pane fade" >
                     <div class="card card-table mb-0">
                       <div class="card-body">
-                        <div class="table-responsive">
-                          <table class="table table-hover table-center mb-0">
-                            <thead>
-                              <tr>
-                                <th>Doctor</th>
-                                <th>Appt Date</th>
-                                <th>Practice Name  </th>
-                                <th>Address</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <h2 class="table-avatar">
-                                    <a  class="avatar avatar-sm mr-2">
-                                      <img class="avatar-img rounded-circle" src="assets/website/img/doctors/doctor1.jpeg" alt="User Image">
-                                    </a>
-                                    <a >Dr. S. Jiyane <span>General</span></a>
-                                  </h2>
-                                </td>
-                                <td>14 Nov 2020 <span class="d-block text-info">10.00 AM</span></td>
-                                <td>Pretoria Medical Centre</td>
-                                <td>11 Arcadia </td>
-                                <td><span class="badge badge-pill bg-success-light">Confirm</span></td>
-                                <td class="text-right">
-                                  <div class="table-action">
+                            <div class="table-responsive">
+                              <table class="table">
+                                <thead class=" text-primary">
+                                  <th>Doctors Name</th>
+                                  <th>Appt Date</th>
+                                  <th>Notes</th>
+                                  <th>Practice Name</th>
+                                  <th>Status</th>
+                                    <th>Action </th>
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let app of appointment">
+                                    <td>
+                                      {{app.doctor}}
+                                    </td>
+                                    <td>{{app.date}} <span class="d-block text-info">10.00 AM - 11-00 AM</span></td>
+                                    <td>{{ app.symptoms }}</td>
+                                    <td> {{app.pratice}}</td>
+                                    <td> <button type="button" class="btn bg-info-light btn-sm" id="topup_status">Completed</button></td>
+                                    <td> <button type="button" class="btn bg-info-light btn-sm" id="topup_status">Approved</button></td>
+                                    <td> <button type="button" class="btn bg-info-light btn-sm" id="topup_status">Pending</button></td>
+                                    <td> <button type="button" class="btn bg-danger-light btn-sm" id="topup_status">Cancel</button></td>
 
-                                    <a class="btn btn-sm bg-info-light">
-                                      <i class="far fa-pencil"></i> Edit
-                                    </a>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <h2 class="table-avatar">
-                                    <a  class="avatar avatar-sm mr-2">
-                                      <img class="avatar-img rounded-circle" src="assets/website/img/doctors/doctor1.jpeg" alt="User Image">
-                                    </a>
-                                    <a >Dr. S. Jiyane <span>General</span></a>
-                                  </h2>
-                                </td>
-                                <td>14 Nov 2020 <span class="d-block text-info">10.00 AM</span></td>
-                                <td>Pretoria Medical Centre</td>
-                                <td>11 Arcadia </td>
-                                <td><span class="badge badge-pill bg-success-light">Confirm</span></td>
-                                <td class="text-right">
-                                  <div class="table-action">
+                                    <td class="">
+                                      <div class="table-action">
+                                        <a class="btn btn-sm bg-info-light" routerLink="/patient/booking"><i class="fa fa-pencil"></i> Edit</a>
 
-                                    <a class="btn btn-sm bg-info-light">
-                                      <i class="far fa-pencil"></i> Edit
-                                    </a>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <h2 class="table-avatar">
-                                    <a  class="avatar avatar-sm mr-2">
-                                      <img class="avatar-img rounded-circle" src="assets/website/img/doctors/doctor1.jpeg" alt="User Image">
-                                    </a>
-                                    <a >Dr. S. Jiyane <span>General</span></a>
-                                  </h2>
-                                </td>
-                                <td>14 Nov 2020 <span class="d-block text-info">10.00 AM</span></td>
-                                <td>Pretoria Medical Centre</td>
-                                <td>11 Arcadia </td>
-                                <td><span class="badge badge-pill bg-danger-light">Cancelled</span></td>
-                                <td class="text-right">
-                                  <div class="table-action">
+                                       </div>
 
-                                    <a class="btn btn-sm bg-info-light">
-                                      <i class="far fa-pencil"></i> Edit
-                                    </a>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <h2 class="table-avatar">
-                                    <a  class="avatar avatar-sm mr-2">
-                                      <img class="avatar-img rounded-circle" src="assets/website/img/doctors/doctor1.jpeg" alt="User Image">
-                                    </a>
-                                    <a >Dr. S. Jiyane <span>General</span></a>
-                                  </h2>
-                                </td>
-                                <td>14 Nov 2020 <span class="d-block text-info">10.00 AM</span></td>
-                                <td>Pretoria Medical Centre</td>
-                                <td>11 Arcadia </td>
-                                <td><span class="badge badge-pill bg-warning-light">Pending</span></td>
-                                <td class="text-right">
-                                  <div class="table-action">
+                                    </td>
+                                  </tr>
 
-                                    <a class="btn btn-sm bg-info-light">
-                                      <i class="far fa-pencil"></i> Edit
-                                    </a>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <h2 class="table-avatar">
-                                    <a  class="avatar avatar-sm mr-2">
-                                      <img class="avatar-img rounded-circle" src="assets/website/img/doctors/doctor1.jpeg" alt="User Image">
-                                    </a>
-                                    <a >Dr. S. Jiyane <span>General</span></a>
-                                  </h2>
-                                </td>
-                                <td>14 Nov 2020 <span class="d-block text-info">10.00 AM</span></td>
-                                <td>Pretoria Medical Centre</td>
-                                <td>11 Arcadia </td>
-                                <td><span class="badge badge-pill bg-success-light">Confirm</span></td>
-                                <td class="text-right">
-                                  <div class="table-action">
 
-                                    <a class="btn btn-sm bg-info-light">
-                                      <i class="far fa-pencil"></i> Edit
-                                    </a>
-                                  </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
                     </div>
                   </div>
                   <!-- /Prescription Tab -->

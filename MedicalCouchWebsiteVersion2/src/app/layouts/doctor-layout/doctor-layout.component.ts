@@ -9,7 +9,7 @@ export class DoctorLayoutComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }
