@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PatientLayoutRoutes } from './patient-layout.routing';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppointmentsComponent } from './appointments/appointments.component';
 import { PrescriptionsComponent } from './prescriptions/prescriptions.component';
 import { ProfileComponent } from './profile/profile.component';
+import { DoctorProfileComponent } from './doctor-profile/doctor-profile.component';
+import { BookingComponent } from './booking/booking.component';
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(PatientLayoutRoutes),
     FormsModule,
+    ReactiveFormsModule,
     // NgbModule
   ],
   declarations: [
@@ -20,7 +22,9 @@ import { ProfileComponent } from './profile/profile.component';
     AppointmentsComponent,
     PrescriptionsComponent,
     ProfileComponent,
-  
+    DoctorProfileComponent,
+    BookingComponent,
+
   ]
 })
 

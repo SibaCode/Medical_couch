@@ -8,14 +8,17 @@ import { environment } from '../../environments/environment';
 export class DoctorService {
 
 
-  
-  headers = new HttpHeaders().set('Authentication', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsInR5cGUiOiJwIiwiaWF0IjoxNTk4MzUwOTEzLCJleHAiOjE1OTkxNTA5MTN9.gzgdNe9kYZnYAqulkCoDmUKLRoPhAvhJTVepmZrjPYw');
-
-
   constructor(private  http: HttpClient) { }
 
 
   public getPractices() {
-    return this.http.get(environment.url + 'doctor' ,{ headers: this.headers })
+    return this.http.get(environment.url + 'doctor' ,{ headers: this.getheaders() })
+  }
+
+
+  public getheaders() {
+
+    let headers = new HttpHeaders().set('Authentication', localStorage.getItem('token').substring(1 , localStorage.getItem('token').length - 1));
+    return headers ;
   }
 }

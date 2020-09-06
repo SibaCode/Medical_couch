@@ -10,6 +10,8 @@ import { LoginComponent } from './website/login/login.component';
 import { PatientLayoutComponent } from './layouts/patient-layout/patient-layout.component';
 import { PharmacyComponent } from './website/pharmacy/pharmacy.component';
 import { DoctorComponent } from './website/doctor/doctor.component';
+import { DoctorLayoutComponent } from './layouts/doctor-layout/doctor-layout.component';
+import { ForgotPasswordComponent } from './website/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { DoctorComponent } from './website/doctor/doctor.component';
     PatientLayoutComponent,
     PharmacyComponent,
     DoctorComponent,
+    DoctorLayoutComponent,
+    ForgotPasswordComponent,
   ],
   imports: [
     BrowserModule,

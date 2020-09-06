@@ -18,4 +18,11 @@ export class DoctorService {
   public getPractices() {
     return this.http.get(environment.url + 'doctor' ,{ headers: this.headers })
   }
+
+  public getheaders() {
+    
+    let headers = new HttpHeaders().set('Authentication', localStorage.getItem('token').substring(1 , localStorage.getItem('token').length - 1));
+    return headers ;
+  }
+
 }
