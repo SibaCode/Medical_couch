@@ -1,0 +1,310 @@
+<header class="header_area" style="position:fixed" width="100%">
+  <div class="top_menu row m0">
+    <div class="container">
+      <div class="float-left">
+        <ul class="left_side">
+					<li>
+            <a>
+              <i class="fa fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a>
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a >
+              <i class="fa fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="float-right">
+        <ul class="right_side">
+          <li>
+            <a >
+              <i class="lnr lnr-phone-handset"></i>
+              081 472 4471 / 081 722 3199
+            </a>
+          </li>
+          <li>
+            <a >
+              <i class="lnr lnr-envelope"></i>
+              health@medicalcouch.co.za
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="main_menu" >
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <a class="navbar-brand logo_h" >
+          <img src="assets/Images/logo.png" alt="" width="100px">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+         aria-expanded="false" aria-label="Toggle navigation">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+          <div class="row ml-0 w-100">
+            <div class="col-lg-12 pr-0">
+              <ul class="nav navbar-nav center_nav pull-right">
+                <li class="nav-item active">
+                  <a class="nav-link" routerLink="/home">About Us</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" routerLink="/patient-information"> Patients</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" routerLink="/doctor-information">Doctor</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/pharmacy-information">Pharmacy</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" routerLink="/login">Login</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<!--================Header Menu Area =================-->
+
+<!--================ Home Banner Area =================-->
+
+<main id="main">
+
+
+
+  <section id="featured-services" class="featured-services" style="background: #eeeeee;">
+    <div class="" data-aos="fade-up">
+      <div class="content">
+        <div class="container-fluid">
+
+          <div class="login-row">
+            <div class="col-md-8 offset-md-2">
+
+              <!-- Login Tab Content -->
+              <div class="account-content">
+                <div class="row align-items-center justify-content-center">
+                  <div class="col-md-7 col-lg-6 login-left">
+                      <img src="assets/Images/logo.png" class="img-fluid" alt="Doccure Login">
+                  </div>
+                  <div class="col-md-12 col-lg-6 login-right">
+
+
+                    <form  [formGroup]="registerForm" (ngSubmit)="register()" >
+
+                        <div class=" form-row info-widget">
+                          <div class="col-12 col-md-6">
+                            <div class="form-group card-label">
+                              <label>First Name</label>
+                              <input type="text" class="form-control" name="name" formControlName="name">
+                              <div *ngIf="registerForm.controls['name']?.invalid && ( registerForm.controls['name']?.dirty || registerForm.controls['name'].touched)" class="alert alert-danger">
+                                <div *ngIf="registerForm.controls['name'].errors.required">
+                                  Name is required.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="form-group card-label">
+                              <label>Surname</label>
+                              <input type="text" class="form-control" name="surname" formControlName="surname">
+                              <div *ngIf="registerForm.controls['surname']?.invalid && ( registerForm.controls['surname']?.dirty || registerForm.controls['surname'].touched)" class="alert alert-danger">
+                                <div *ngIf="registerForm.controls['surname'].errors.required">
+                                  surname is required.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="form-group card-label">
+                              <label>Title</label>
+                              <select class="form-control select" formControlName="title">
+                                <option value="Mr">Mr</option>
+                                <option value="Miss">Miss</option>
+                                <option value="Mrs">Mrs</option>
+                                <option value="Prof">Prof</option>
+                                <option value="Dr">Dr</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="form-group card-label">
+                              <label>Gender</label>
+                              <select class="form-control select" formControlName="gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Rather Not Say">Rather Not Say</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-12">
+                            <div class="form-group card-label">
+                              <label>Email </label>
+                              <input type="email" class="form-control" name="email" formControlName="email">
+                              <div *ngIf="registerForm.controls['email']?.invalid && ( registerForm.controls['email']?.dirty || registerForm.controls['email'].touched)" class="alert alert-danger">
+                                <div *ngIf="registerForm.controls['email'].errors?.required">
+                                  email is required.
+                                </div>
+                                <div *ngIf="registerForm.controls['email']?.errors.email">Email must be a valid email address</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-12 col-md-12">
+                            <div class="form-group card-label">
+                              <label>Address </label>
+                              <input type="email" class="form-control" name="address" formControlName="address">
+                              <div *ngIf="registerForm.controls['address']?.invalid && ( registerForm.controls['address']?.dirty || registerForm.controls['address'].touched)" class="alert alert-danger">
+                                <div *ngIf="registerForm.controls['address'].errors?.required">
+                                  address is required.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="form-group card-label">
+                              <label>Password</label>
+                              <input type="password" class="form-control" name="password" formControlName="password">
+                              <div *ngIf="registerForm.controls['password']?.invalid && ( registerForm.controls['password']?.dirty || registerForm.controls['password'].touched)" class="alert alert-danger">
+                                <div *ngIf="registerForm.controls['password'].errors?.required">
+                                  password is required.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="form-group card-label">
+                              <label>Confirm Password</label>
+                              <input type="password" class="form-control" name="password" formControlName="confirm">
+                              <div *ngIf="registerForm.controls['confirm']?.invalid && ( registerForm.controls['confirm']?.dirty || registerForm.controls['confirm'].touched)" class="alert alert-danger">
+                                <div *ngIf="registerForm.controls['confirm'].errors?.required">
+                                  confirm is required.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="form-group card-label">
+                              <label>Phone Number</label>
+                              <input type="number" class="form-control" name="number" formControlName="cell">
+                              <div *ngIf="registerForm.controls['cell']?.invalid && ( registerForm.controls['cell']?.dirty || registerForm.controls['cell'].touched)" class="alert alert-danger">
+                                <div *ngIf="registerForm.controls['cell'].errors?.required">
+                                  Phone number is required.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="form-group card-label">
+                              <label>ID Number</label>
+                              <input type="text" minlength="13" class="form-control" name="number" formControlName="idno">
+                              <div *ngIf="registerForm.controls['idno']?.invalid && ( registerForm.controls['idno']?.dirty || registerForm.controls['idno'].touched)" class="alert alert-danger">
+                                <div *ngIf="registerForm.controls['idno'].errors?.required">
+                                  idno is required.
+                                </div>
+                                <div *ngIf="registerForm.controls['idno'].errors?.minlength">
+                                  idno is required.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="form-group card-label">
+                              <label>Medical Aid</label>
+                              <select class="form-control select" formControlName="medical_name">
+                                <option value="{{x.id}}" *ngFor="let x  of medicalAid">{{x.name}}</option>
+
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="col-12 col-md-6">
+                            <div class="form-group card-label">
+                              <label>Medical Aid Number</label>
+                              <input type="text" class="form-control" name="number"  formControlName="aid_number">
+                              <div *ngIf="registerForm.controls['aid_number']?.invalid && ( registerForm.controls['aid_number']?.dirty || registerForm.controls['aid_number'].touched)" class="alert alert-danger">
+                                <div *ngIf="registerForm.controls['aid_number'].errors?.required">
+                                  medical_name is required.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+
+
+                      <button class="btn btn-primary btn-block btn-lg login-btn btn-block btn-outline-primary active" type="submit">Login</button>
+
+                      <div class="text-center dont-have">Already have an account?<a routerLink="/login"> Login</a></div>
+                      </form>
+                  </div>
+                </div>
+              </div>
+              <!-- /Login Tab Content -->
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+  </section><!-- End Featured Services Section -->
+
+
+
+
+</main>
+<footer class="footer">
+
+				<!-- Footer Bottom -->
+								<div class="footer-bottom">
+					<div class="container-fluid">
+
+						<!-- Copyright -->
+						<div class="copyright">
+							<div class="row">
+
+								<div class="col-md-6 col-lg-6">
+
+									<!-- Copyright Menu -->
+									<div class="copyright-menu">
+										<ul class="policy-menu">
+											<!-- <li><a href="term-condition.html">Terms and Conditions</a></li> -->
+											<li><a >Privacy Policy</a></li>
+										</ul>
+									</div>
+									<!-- /Copyright Menu -->
+
+								</div>
+							</div>
+						</div>
+						<!-- /Copyright -->
+
+					</div>
+				</div>
+				<!-- /Footer Bottom -->
+
+			</footer>

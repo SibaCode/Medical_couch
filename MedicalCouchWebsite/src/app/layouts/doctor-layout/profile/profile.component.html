@@ -1,0 +1,209 @@
+<div class="main-wrapper">
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg header-nav">
+      <div class="navbar-header">
+        <a id="mobile_btn" >
+          <span class="bar-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </a>
+        <a class="navbar-brand logo">
+          <img src="assets/Images/logo.png" class="img-fluid" alt="Logo">
+        </a>
+      </div>
+      <div class="main-menu-wrapper">
+        <div class="menu-header">
+          <a class="menu-logo">
+            <img src="assets/Images/logo.png" class="img-fluid" alt="Logo">
+          </a>
+          <a id="menu_close" class="menu-close" >
+            <i class="fas fa-times"></i>
+          </a>
+        </div>
+        <ul class="main-nav" style="margin-left: auto;">
+
+          <li >
+            <a  routerLink="/doctor/appointments">Appointments </a>
+          </li>
+
+          <li class="active" >
+            <a   routerLink="/doctor/profile">Profile </a>
+          </li>
+          <li>
+            <a  routerLink="/doctor/practice-profile">Practice Profile </a>
+          </li>
+
+
+          <li >
+            <a routerLink="logout()">Logout </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- /Header -->
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb-bar">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-md-8 col-12">
+          <nav aria-label="breadcrumb" class="page-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Search</li>
+            </ol>
+          </nav>
+          <h2 class="breadcrumb-title"> Profile</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+    <div class="content">
+      <div class="container-fluid">
+
+        <div class="row">
+
+
+
+          <div class="col-md-12 col-lg-12 col-xl-12">
+            <!-- Clinic Info -->
+            <div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Basic Information</h4>
+									<div class="row form-row   info-widget">
+										<div class="col-md-12">
+											<div class="form-group card-label">
+												<div class="change-avatar">
+													<div class="profile-img">
+														<img src="assets/website/img/doctors/doctor1.jpeg" alt="User Image">
+													</div>
+													<div class="upload-img">
+														<div class="change-photo-btn">
+															<span><i class="fa fa-upload"></i> Upload Photo</span>
+															<input type="file" class="upload">
+														</div>
+														<small class="form-text text-muted">Allowed JPG, GIF or PNG. Max size of 2MB</small>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group card-label">
+												<label>Username <span class="text-danger">*</span></label>
+												<input type="text" class="form-control" readonly>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group card-label">
+												<label>Email <span class="text-danger">*</span></label>
+												<input type="email" class="form-control" readonly>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group card-label">
+												<label>First Name <span class="text-danger">*</span></label>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group card-label">
+												<label>Last Name <span class="text-danger">*</span></label>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group card-label">
+												<label>Phone Number</label>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group card-label">
+												<label>Gender</label>
+												<select class="form-control select">
+													<option>Select</option>
+													<option>Male</option>
+													<option>Female</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group card-label mb-0">
+												<label>Date of Birth</label>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<!-- /Clinic Info -->
+
+							<!-- Contact Details -->
+							<div class="card contact-card">
+								<div class="card-body">
+									<h4 class="card-title">Contact Details</h4>
+									<div class="row form-row">
+										<div class="col-md-6 pr-1">
+											<div class="form-group card-label card-label">
+												<label>Address Line 1</label>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-6 pr-1">
+											<div class="form-group card-label card-label">
+												<label class="control-label">Address Line 2</label>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-6 pr-1">
+											<div class="form-group card-label card-label">
+												<label class="control-label">City</label>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-6 pr-1">
+											<div class="form-group card-label card-label">
+												<label class="control-label">State / Province</label>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-6 pr-1">
+											<div class="form-group card-label card-label">
+												<label class="control-label">Country</label>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-6 pr-1">
+											<div class="form-group card-label card-label">
+												<label class="control-label">Postal Code</label>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Contact Details -->
+
+              <div class="submit-section submit-btn-bottom">
+								<button type="submit" class="btn btn-primary submit-btn">Save Changes</button>
+							</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- /Page Content -->
+
+    <!-- Footer -->
+
+  </div>
+  <!-- /Main Wrapper -->
