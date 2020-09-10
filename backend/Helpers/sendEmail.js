@@ -1,4 +1,6 @@
 const nodemailer = require("nodemailer");
+const msg = require('./msg');
+const { patient } = require("./msg");
 require("dotenv").config();
 
 /**
@@ -10,20 +12,24 @@ require("dotenv").config();
 async function sendEmail(email, body, _subject) {
   //configuring smtp transport machanism for password reset email
   let transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "mail.medicalcouch.co.za",
     port: 465,
-    secure: true, // true for 465, false for other ports
+     secure: true, // true for 465, false for other ports
     auth: {
-      user: process.env.EMAIL || 'gift@thedigitalacademy.co.za', // your gmail address
-      pass: process.env.EMAIL_PASSWORD || '1Smallworld@' // your gmail password
+      user: process.env.EMAIL || 'support@medicalcouch.co.za', // your gmail address
+      pass: process.env.EMAIL_PASSWORD || 'yf5sFgLydHn?' // your gmail password
     }
+    ,tls: { 
+      rejectUnauthorized: false 
+  }
   });
 
   let mailOptions = {
     subject: _subject,
-    to: email,
-    from: `Novelty Team`,
-    html: body
+    to: 'cj.sibusiso@gmail.com',
+    from: `support@medicalcouch.co.za`,
+    html: patient.register// html bodyr,
+    
   };
   return transporter.sendMail(mailOptions);
 }

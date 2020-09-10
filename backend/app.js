@@ -9,12 +9,16 @@ const cors = require("cors");
 let morgan = require("morgan");
 const multer = require('multer');
 const path = require('path');
-const {upload} = require('./Helpers')
+const {upload, sendEmail} = require('./Helpers')
 // var CronJob = require('cron').CronJob;
 // var job = new CronJob('1 * * * * * ', function() {
 //   console.log('You will see this message every second');
 // }, null, true, 'America/Los_Angeles');
 // job.start();
+
+// sendEmail('dadas','sdasd', 'asdsda').then(res => {
+//   console.log(res) 
+// })
 
 
 app.use(morgan("combined"));

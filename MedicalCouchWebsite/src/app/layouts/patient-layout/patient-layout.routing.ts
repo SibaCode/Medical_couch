@@ -15,7 +15,7 @@ export const PatientLayoutRoutes: Routes = [
     // { path: 'booking',           component: BookingComponent },
     // { path: 'appointments',          component: AppointmentsComponent },
     { path: 'profile',     component: ProfileComponent},
-    { path: 'doctor-profile',     component: DoctorProfileComponent},
+    { path: 'doctor-profile/:id',     component: DoctorProfileComponent},
 
     // { path: 'table',          component: TableComponent },
     // { path: 'typography',     component: TypographyComponent },

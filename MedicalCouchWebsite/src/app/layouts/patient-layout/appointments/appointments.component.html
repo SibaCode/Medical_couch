@@ -113,13 +113,16 @@
                                     <td>
                                       {{app.doctor}}
                                     </td>
-                                    <td>{{app.date}} <span class="d-block text-info">10.00 AM - 11-00 AM</span></td>
+                                    <td>{{app.date}} <span class="d-block text-info">{{app.time}}</span></td>
                                     <td>{{ app.symptoms }}</td>
                                     <td> {{app.pratice}}</td>
-                                    <td> <button type="button" class="btn bg-info-light btn-sm" id="topup_status">Completed</button></td>
-                                    <td> <button type="button" class="btn bg-info-light btn-sm" id="topup_status">Approved</button></td>
-                                    <td> <button type="button" class="btn bg-info-light btn-sm" id="topup_status">Pending</button></td>
-                                    <td> <button type="button" class="btn bg-danger-light btn-sm" id="topup_status">Cancel</button></td>
+                                    <div *ngIf="app.status === 3">
+                                          sshowing
+                                    </div>
+                                    <td *ngIf="app.status === 3"> <button type="button" class="btn bg-info-light btn-sm" id="topup_status">Completed</button></td>
+                                    <td *ngIf="app.status === 2"> <button type="button" class="btn bg-info-light btn-sm" id="topup_status">Approved</button></td>
+                                    <td *ngIf="app.status === 1"> <button type="button" class="btn bg-info-light btn-sm" id="topup_status">Pending</button></td>
+                                    <td *ngIf="app.status === 4"> <button type="button" class="btn bg-danger-light btn-sm" id="topup_status">Cancelled</button></td>
 
                                     <td class="">
                                       <div class="table-action">

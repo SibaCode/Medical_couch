@@ -113,12 +113,70 @@
                     </h3>
                     <p class="speciality">{{ practice.discipline }}</p>
                     <div class="rating">
-                      <i class="fas fa-star filled"></i>
-                      <i class="fas fa-star filled"></i>
-                      <i class="fas fa-star filled"></i>
-                      <i class="fas fa-star filled"></i>
-                      <i class="fas fa-star filled"></i>
-                      <span class="d-inline-block average-rating">(17)</span>
+                      
+
+
+                      <div [ngSwitch]="practice.Review">
+                        <!-- the same view can be shown in more than one case -->
+                        <div *ngSwitchCase="1">
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star "></i>
+                          <i class="fas fa-star "></i>
+                          <i class="fas fa-star "></i>
+                          <i class="fas fa-star "></i>
+                 
+                        </div>
+
+                        <div *ngSwitchCase="2">
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+
+                          <i class="fas fa-star "></i>
+                          <i class="fas fa-star "></i>
+                          <i class="fas fa-star "></i>
+          
+                        </div>
+
+                        <div *ngSwitchCase="3">
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star "></i>
+                          <i class="fas fa-star "></i>
+                          
+                        
+                        </div>
+
+                        <div *ngSwitchCase="4">
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star "></i>
+                        </div>
+
+                        <div *ngSwitchCase="5">
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                        </div>
+                     
+                        <!--default case when there are no matches -->
+                        <div *ngSwitchDefault>
+                          <i class="fas fa-star "></i>
+                          <i class="fas fa-star "></i>
+                          <i class="fas fa-star "></i>
+                          <i class="fas fa-star "></i>
+                          <i class="fas fa-star "></i>
+
+                        </div>
+                    </div>
+
+
+
+                      <!-- <span class="d-inline-block average-rating">(17)</span> -->
                     </div>
                     <ul class="available-info">
                       <li>
@@ -133,7 +191,7 @@
                     </ul>
                     <div class="row row-sm">
                       <div class="col-6">
-                        <a routerLink="/patient/doctor-profile"class="btn book-btn btn-block btn-outline-primary active">View Profile</a>
+                        <a routerLink="/patient/doctor-profile/{{practice.id}}"class="btn book-btn btn-block btn-outline-primary active">View Profile</a>
                       </div>
                       <div class="col-6">
                         <a routerLink="/patient/booking"class="btn book-btn btn-block btn-outline-primary active">Book Now</a>
