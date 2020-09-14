@@ -1,6 +1,5 @@
-const{ response,validate,queryFunction,sendEmail,generateToken,verifyToken , validate2 } = require('../Helpers');
+const{ response,validate,queryFunction,sendEmail,generateToken,verifyToken , msg , validate2 } = require('../Helpers');
 const bcrypt = require ('bcryptjs');
-const msg = require ('../config/bodyMessage');
 const validator = require ('validator'); //import validator.js
 
 /**
@@ -35,8 +34,9 @@ async function register(data) {
   let sql = ' CALL registerPatient(?);';
  
 
-  return queryFunction(sql, dataPop).then( result => {
-    //await mail.sendEmail(data.email, msg.registerMessage(result[0].first_name), msg.registerSubject());
+  return queryFunction(sql, dataPop).then( async (result) => {
+    sendEmail(data.email, msg.patient.register.msg , msg.patient.register.subject) 
+   console.log(msg.patient.register.msg)
     return response(201, 'Successfully created an account.' );
     })
     .catch(error => {

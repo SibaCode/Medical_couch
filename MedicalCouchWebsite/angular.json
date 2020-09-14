@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/angular-calendar/css/angular-calendar.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -89,6 +90,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/angular-calendar/css/angular-calendar.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -120,6 +122,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MedicalCouchWebsite"
+    }
+  },
+  "defaultProject": "MedicalCouchWebsite",
+  "cli": {
+    "analytics": "01e14e37-e3b8-4888-b33f-b9761d2fd613"
+  }
 }

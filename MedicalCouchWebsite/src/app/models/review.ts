@@ -9,5 +9,6 @@ export interface Review {
     star: number,
     name: string,
     surname: string,
-    created_on: string
+    created_on: string,
+    p_id:number
 }

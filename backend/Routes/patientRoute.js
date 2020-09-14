@@ -1,11 +1,17 @@
 const patientRoute = require("express").Router();
 const patientController = require("../Controllers/patientCtrl");
 const auth = require('../middleware/auth') ;
+const{ sendEmail } = require('../Helpers');
 
 // Register
 patientRoute.post("/", async(req, res) => {
     result = await patientController.register(req.body);
   
+    
+    // if( result.status === 201) {
+    //      sendEmail(data.email, msg.patient.register.msg, msg.patient.register.subject) ;
+    // }
+
     res.status(result.status).send(result);
 });
 

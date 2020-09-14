@@ -9,7 +9,7 @@ const{ response,validate,queryFunction,sendEmail,generateToken,verifyToken , val
  */
 async function addReview(data) {
 
-  let fields = ['id', 'coment' , 'star', 'appoint_id' , 'practice_id',] ;
+  let fields = ['id', 'coment' , 'star' , 'practice_id',] ;
 
   let check = validate2(data,fields)  ; 
 

@@ -14,7 +14,7 @@ async function sendEmail(email, body, _subject) {
   let transporter = nodemailer.createTransport({
     host: "mail.medicalcouch.co.za",
     port: 465,
-     secure: true, // true for 465, false for other ports
+    secure: true, // true for 465, false for other ports
     auth: {
       user: process.env.EMAIL || 'support@medicalcouch.co.za', // your gmail address
       pass: process.env.EMAIL_PASSWORD || 'yf5sFgLydHn?' // your gmail password
@@ -26,9 +26,9 @@ async function sendEmail(email, body, _subject) {
 
   let mailOptions = {
     subject: _subject,
-    to: 'cj.sibusiso@gmail.com',
+    to: email,
     from: `support@medicalcouch.co.za`,
-    html: patient.register// html bodyr,
+    html: body// html bodyr,
     
   };
   return transporter.sendMail(mailOptions);

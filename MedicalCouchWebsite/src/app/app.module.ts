@@ -17,6 +17,8 @@ import { ForgotPasswordComponent } from './website/forgot-password/forgot-passwo
 import { PatientLayoutComponent } from './layouts/patient-layout/patient-layout.component';
 import { DoctorLayoutComponent } from './layouts/doctor-layout/doctor-layout.component';
 import { PharmacyLayoutComponent } from './layouts/pharmacy-layout/pharmacy-layout.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +40,7 @@ import { PharmacyLayoutComponent } from './layouts/pharmacy-layout/pharmacy-layo
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
     // CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory })
   ],
   providers: [],

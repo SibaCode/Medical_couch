@@ -207,7 +207,7 @@
                   													<div class="comment-body">
                   														<div class="meta-data">
                   															<span class="comment-author">{{review.name}} {{review.surname}}</span>
-																			  <span class="comment-date">Reviewed 2 Days ago</span>
+																			  <span class="comment-date">Reviewed on {{ review.created_on}}</span>
 																			  
 																			  <div [ngSwitch]="review.star" class="review-count rating">
 																				<!-- the same view can be shown in more than one case -->

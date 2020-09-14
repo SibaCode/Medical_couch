@@ -20,4 +20,10 @@ constructor(private http: HttpClient) { }
     }
 
 
+    public addReview(data) {
+      return this.http.post(environment.url + "review" , data , { headers: this.getheaders() })
+    }
+
+
+
 }

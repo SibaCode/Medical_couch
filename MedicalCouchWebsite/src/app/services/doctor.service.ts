@@ -23,4 +23,5 @@ export class DoctorService {
     return this.http.get(environment.url + 'doctor' ,{ headers: this.getheaders() })
   }
 
+
 }

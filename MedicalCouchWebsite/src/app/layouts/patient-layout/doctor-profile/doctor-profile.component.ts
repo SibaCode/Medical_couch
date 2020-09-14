@@ -14,7 +14,7 @@ export class DoctorProfileComponent implements OnInit {
   reviews: Review[] ;
   star: number = null ; 
   comment: string ;
-isStar = false ;
+  isStar = false ;
   isComment: boolean = false;
   constructor(public activeRoute: ActivatedRoute, private practiceS: PracticeService) {
     this.activeRoute.params.subscribe( (param) => {
@@ -26,12 +26,19 @@ isStar = false ;
    }
 
   ngOnInit() {
+
   }
 
   getReviews() {
     this.practiceS.getReviews(this.p_id).subscribe((res: ReviewResponse) => {
         this.reviews = res.data ;
-    })
+            this.reviews.filter((r) => {
+              
+      console.log(r.p_id === this.p_id ? true: false);
+   })
+    });
+
+
   }
 
 
@@ -54,7 +61,15 @@ isStar = false ;
       this.isComment = false ;
     }
 
-    console.log(this.comment);
+    let review = {
+      star: this.star,
+      coment: this.comment,
+      practice_id: this.p_id  
+    }
+
+    this.practiceS.addReview(review).subscribe( (res) => {
+      console.log(res)
+    })
     
   }
 }
