@@ -81,12 +81,12 @@
                       <img src="assets/Images/doctor1.jpeg" alt="User Image">
                     </a>
                     <div class="profile-det-info">
-                      <h3>Dr Name</h3>
+                      <h3>Dr {{practice.dsurname}}</h3>
 
                       <div class="patient-details">
                         <!-- <h5><b>Patient ID :</b> PT0016</h5> -->
-                        <h5 class="mb-0"><i class="fas fa-map-marker-alt"></i> Pretoria, SA </h5>
-                          <h5 class="mb-0"><i class="fas fa-phone"></i> 000000000 </h5>
+                        <h5 class="mb-0"><i class="fas fa-map-marker-alt"></i> {{practice.address}} </h5>
+                          <h5 class="mb-0"><i class="fas fa-phone"></i> {{practice.number}} </h5>
                       </div>
                     </div>
                   </div>
@@ -347,7 +347,6 @@
 
                   								</div>
                   								<!-- /Reviews Content -->
-
                 </div>
               </div>
             </div>

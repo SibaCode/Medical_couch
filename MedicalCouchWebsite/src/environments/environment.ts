@@ -4,6 +4,9 @@
 export const environment = {
   production: false,
   url: 'http://localhost:5001/api/v1/',
+  cancel_url: 'http://eec93644ec92.ngrok.io/doctor/payment/cancel',
+  notify_url: 'http://eec93644ec92.ngrok.io/doctor/payment/success',
+  return_url: 'http://eec93644ec92.ngrok.io'
   
 };
 

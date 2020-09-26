@@ -13,6 +13,10 @@ export class RegisterComponent implements OnInit {
 
   medicalAid: AidScheme[] ;
   registerForm: FormGroup ;
+  ph: string = "btn book-btn btn-block btn-outline-primary" ; 
+  p: string = "btn book-btn btn-block btn-outline-primary active" ;
+  d: string = "btn book-btn btn-block btn-outline-primary" ; 
+  select: string = 'p' ;
   constructor(private fb: FormBuilder, private patientService: PatientService) {
 
     this.patientService.getMedicalAid().subscribe( (res: AidSchemeResponse) => {
@@ -22,6 +26,7 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit() {
+    
     this.registerForm = this.fb.group({
       name: new FormControl('', [
                                   Validators.required,
@@ -60,6 +65,30 @@ export class RegisterComponent implements OnInit {
         'error'
       )
     })
+  }
+
+
+  selected(d) {
+    
+    console.log(d);
+    
+
+    if(d === 'p') {
+      this.ph = "btn book-btn btn-block btn-outline-primary" ; 
+      this.p = "btn book-btn btn-block btn-outline-primary active" ;
+      this.d = "btn book-btn btn-block btn-outline-primary" ; 
+      this.select = 'p';
+    }else if(d === 'd') {
+      this.ph = "btn book-btn btn-block btn-outline-primary" ; 
+      this.p = "btn book-btn btn-block btn-outline-primary" ;
+      this.d = "btn book-btn btn-block btn-outline-primary active" ; 
+      this.select = 'd';
+    }else  {
+      this.ph = "btn book-btn btn-block btn-outline-primary active" ; 
+      this.p = "btn book-btn btn-block btn-outline-primary" ;
+      this.d = "btn book-btn btn-block btn-outline-primary" ; 
+      this.select = 'ph';
+    }
   }
 
 

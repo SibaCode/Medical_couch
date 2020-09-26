@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PracticeService } from '../../../services/practice.service';
 import { Review, ReviewResponse } from '../../../models/review';
+import { Practice, PracticeResponse } from '../../../models/practice';
 
 @Component({
   selector: 'app-doctor-profile',
@@ -16,13 +17,15 @@ export class DoctorProfileComponent implements OnInit {
   comment: string ;
   isStar = false ;
   isComment: boolean = false;
+  practice: Practice ; 
   constructor(public activeRoute: ActivatedRoute, private practiceS: PracticeService) {
     this.activeRoute.params.subscribe( (param) => {
       this.p_id = param['id']
       console.log(param['id'])
     }); 
 
-    this.getReviews()
+    this.getReviews() ; 
+    this.getSingle() 
    }
 
   ngOnInit() {
@@ -45,6 +48,13 @@ export class DoctorProfileComponent implements OnInit {
   rating(star){
     this.star = star ;
   
+  }
+
+
+  getSingle() {
+    this.practiceS.getSinglePractrice(this.p_id).subscribe((res:PracticeResponse) => {
+      this.practice = res.data[0] ;
+    })
   }
 
   addReview(){

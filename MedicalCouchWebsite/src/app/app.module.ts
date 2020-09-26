@@ -31,7 +31,7 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
     ForgotPasswordComponent,
     PatientLayoutComponent,
     DoctorLayoutComponent,
-    PharmacyLayoutComponent
+    PharmacyLayoutComponent,
   ],
   imports: [
     BrowserModule,

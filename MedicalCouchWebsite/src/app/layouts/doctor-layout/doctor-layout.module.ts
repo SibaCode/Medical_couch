@@ -8,13 +8,15 @@ import { AppointmentsComponent } from './appointments/appointments.component';
 import { DoctorLayoutRoutes } from './doctor-layout.routing';
 import { PracticeProfileComponent } from './practice-profile/practice-profile.component';
 import { ProfileComponent } from './profile/profile.component';
+import { PaymentComponent } from './payment/payment.component';
+import { SuccessComponent } from './success/success.component';
 // import { BookingsComponent } from './bookings/bookings.component';
 // import { DoctorSidebarComponent } from './components/doctor-sidebar/doctor-sidebar.component';
 // import { DoctorNavbarComponent } from './components/doctor-navbar/doctor-navbar.component';
 
 
 @NgModule({
-  declarations: [AppointmentsComponent, PracticeProfileComponent, ProfileComponent],
+  declarations: [AppointmentsComponent, PracticeProfileComponent, ProfileComponent, PaymentComponent, SuccessComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(DoctorLayoutRoutes),

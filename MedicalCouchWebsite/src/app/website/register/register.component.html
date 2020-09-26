@@ -105,8 +105,24 @@
                   </div>
                   <div class="col-md-12 col-lg-6 login-right">
 
+                    <div class="login-header" >
+                      <h3>Register as</h3>
+                    </div>
+                    <div class="row row-sm" style=" padding-top: 10px;margin-right: -3px;    margin-left: 1px;">
+                      <div class="col-4">
+                        <a  [ngClass]="p" (click)="selected('p')">Patient</a>
+                      </div>
+                      <div class="col-4">
+                        <a  [ngClass]="d"(click)="selected('d')">Doctor</a>
+                      </div>
+                      <div class="col-4">
+                        <a [ngClass]="ph" (click)="selected('ph')">Pharmacy </a>
+                      </div>
+                    </div>
 
-                    <form  [formGroup]="registerForm" (ngSubmit)="register()" >
+
+                    <form  [formGroup]="registerForm" (ngSubmit)="register()" *ngIf="select==='p'" >
+
 
                         <div class=" form-row info-widget">
                           <div class="col-12 col-md-6">
@@ -254,7 +270,227 @@
                       <button class="btn btn-primary btn-block btn-lg login-btn btn-block btn-outline-primary active" type="submit">Login</button>
 
                       <div class="text-center dont-have">Already have an account?<a routerLink="/login"> Login</a></div>
-                      </form>
+                    </form>
+
+
+                    <form  [formGroup]="registerForm" (ngSubmit)="register()" *ngIf="select==='d'" >
+
+                        <div class=" form-row info-widget">
+                          <div class="col-12 col-md-6">
+                            <div class="form-group card-label">
+                              <label>First Name</label>
+                              <input type="text" class="form-control" name="name" formControlName="name">
+                              <div *ngIf="registerForm.controls['name']?.invalid && ( registerForm.controls['name']?.dirty || registerForm.controls['name'].touched)" class="alert alert-danger">
+                                <div *ngIf="registerForm.controls['name'].errors.required">
+                                  Name is required.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="form-group card-label">
+                              <label>Surname</label>
+                              <input type="text" class="form-control" name="surname" formControlName="surname">
+                              <div *ngIf="registerForm.controls['surname']?.invalid && ( registerForm.controls['surname']?.dirty || registerForm.controls['surname'].touched)" class="alert alert-danger">
+                                <div *ngIf="registerForm.controls['surname'].errors.required">
+                                  surname is required.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="form-group card-label">
+                              <label>Gender</label>
+                              <select class="form-control select" formControlName="gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Rather Not Say">Rather Not Say</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-12">
+                            <div class="form-group card-label">
+                              <label>Email </label>
+                              <input type="email" class="form-control" name="email" formControlName="email">
+                              <div *ngIf="registerForm.controls['email']?.invalid && ( registerForm.controls['email']?.dirty || registerForm.controls['email'].touched)" class="alert alert-danger">
+                                <div *ngIf="registerForm.controls['email'].errors?.required">
+                                  email is required.
+                                </div>
+                                <div *ngIf="registerForm.controls['email']?.errors.email">Email must be a valid email address</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-12 col-md-12">
+                            <div class="form-group card-label">
+                              <label>Address </label>
+                              <input type="email" class="form-control" name="address" formControlName="address">
+                              <div *ngIf="registerForm.controls['address']?.invalid && ( registerForm.controls['address']?.dirty || registerForm.controls['address'].touched)" class="alert alert-danger">
+                                <div *ngIf="registerForm.controls['address'].errors?.required">
+                                  address is required.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="form-group card-label">
+                              <label>Password</label>
+                              <input type="password" class="form-control" name="password" formControlName="password">
+                              <div *ngIf="registerForm.controls['password']?.invalid && ( registerForm.controls['password']?.dirty || registerForm.controls['password'].touched)" class="alert alert-danger">
+                                <div *ngIf="registerForm.controls['password'].errors?.required">
+                                  password is required.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="form-group card-label">
+                              <label>Confirm Password</label>
+                              <input type="password" class="form-control" name="password" formControlName="confirm">
+                              <div *ngIf="registerForm.controls['confirm']?.invalid && ( registerForm.controls['confirm']?.dirty || registerForm.controls['confirm'].touched)" class="alert alert-danger">
+                                <div *ngIf="registerForm.controls['confirm'].errors?.required">
+                                  confirm is required.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="form-group card-label">
+                              <label>Phone Number</label>
+                              <input type="number" class="form-control" name="number" formControlName="cell">
+                              <div *ngIf="registerForm.controls['cell']?.invalid && ( registerForm.controls['cell']?.dirty || registerForm.controls['cell'].touched)" class="alert alert-danger">
+                                <div *ngIf="registerForm.controls['cell'].errors?.required">
+                                  Phone number is required.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="form-group card-label">
+                              <label>Qualification</label>
+                              <input type="text" minlength="13" class="form-control" name="number" formControlName="idno">
+                              <div *ngIf="registerForm.controls['idno']?.invalid && ( registerForm.controls['idno']?.dirty || registerForm.controls['idno'].touched)" class="alert alert-danger">
+                                <div *ngIf="registerForm.controls['idno'].errors?.required">
+                                  idno is required.
+                                </div>
+                                <div *ngIf="registerForm.controls['idno'].errors?.minlength">
+                                  idno is required.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <br>
+                          <div class="login-header col-12 col-md-12" >
+                            <h3>Surgery information</h3>
+                          </div>
+
+                          <br>
+                            <div class="col-12 col-md-6">
+                              <div class="form-group card-label">
+                                <label>Surgary Name</label>
+                                <input type="text" class="form-control" name="name" formControlName="name">
+                                <div *ngIf="registerForm.controls['name']?.invalid && ( registerForm.controls['name']?.dirty || registerForm.controls['name'].touched)" class="alert alert-danger">
+                                  <div *ngIf="registerForm.controls['name'].errors.required">
+                                    Name is required.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                              <div class="form-group card-label">
+                                <label>Surgary number</label>
+                                <input type="text" class="form-control" name="name" formControlName="name">
+                                <div *ngIf="registerForm.controls['name']?.invalid && ( registerForm.controls['name']?.dirty || registerForm.controls['name'].touched)" class="alert alert-danger">
+                                  <div *ngIf="registerForm.controls['name'].errors.required">
+                                    Name is required.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                              <div class="form-group card-label">
+                                <label>Website</label>
+                                <input type="text" class="form-control" name="name" formControlName="name">
+                                <div *ngIf="registerForm.controls['name']?.invalid && ( registerForm.controls['name']?.dirty || registerForm.controls['name'].touched)" class="alert alert-danger">
+                                  <div *ngIf="registerForm.controls['name'].errors.required">
+                                    Name is required.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                              <div class="form-group card-label">
+                                <label>operation hours</label>
+                                <input type="text" class="form-control" name="name" formControlName="name">
+                                <div *ngIf="registerForm.controls['name']?.invalid && ( registerForm.controls['name']?.dirty || registerForm.controls['name'].touched)" class="alert alert-danger">
+                                  <div *ngIf="registerForm.controls['name'].errors.required">
+                                    Name is required.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                              <div class="form-group card-label">
+                                <label>Discipline</label>
+                                <input type="text" class="form-control" name="name" formControlName="name">
+                                <div *ngIf="registerForm.controls['name']?.invalid && ( registerForm.controls['name']?.dirty || registerForm.controls['name'].touched)" class="alert alert-danger">
+                                  <div *ngIf="registerForm.controls['name'].errors.required">
+                                    Name is required.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+                            <div class="col-12 col-md-6">
+                              <div class="form-group card-label">
+                                <label>Address</label>
+                                <input type="text" class="form-control" name="name" formControlName="name">
+                                <div *ngIf="registerForm.controls['name']?.invalid && ( registerForm.controls['name']?.dirty || registerForm.controls['name'].touched)" class="alert alert-danger">
+                                  <div *ngIf="registerForm.controls['name'].errors.required">
+                                    Name is required.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                          
+                          <div class="col-12 col-md-6">
+                            <div class="form-group card-label">
+                              <label>Medical Aid</label>
+                              <select class="form-control select" formControlName="medical_name">
+                                <option value="{{x.id}}" *ngFor="let x  of medicalAid">{{x.name}}</option>
+
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="col-12 col-md-6">
+                            <div class="form-group card-label">
+                              <label>Medical Aid Number</label>
+                              <input type="text" class="form-control" name="number"  formControlName="aid_number">
+                              <div *ngIf="registerForm.controls['aid_number']?.invalid && ( registerForm.controls['aid_number']?.dirty || registerForm.controls['aid_number'].touched)" class="alert alert-danger">
+                                <div *ngIf="registerForm.controls['aid_number'].errors?.required">
+                                  medical_name is required.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+
+
+                      <button class="btn btn-primary btn-block btn-lg login-btn btn-block btn-outline-primary active" type="submit">Login</button>
+
+                      <div class="text-center dont-have">Already have an account?<a routerLink="/login"> Login</a></div>
+                    </form>
                   </div>
                 </div>
               </div>

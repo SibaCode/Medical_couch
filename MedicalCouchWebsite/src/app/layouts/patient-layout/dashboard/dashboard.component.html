@@ -81,10 +81,12 @@
             <div class="card-body">
             <div class="filter-widget">
               <div class="cal-icon">
-                <input type="text" class="form-control datetimepicker" placeholder="Select Date">
+                <!-- <input type="text" class="form-control datetimepicker" placeholder="Select Date"> -->
+                <input class="form-control" ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)"/>
               </div>
             </div>
-
+            
+            
               <div class="btn-search">
                 <button type="button" class="btn btn-block">Search</button>
               </div>

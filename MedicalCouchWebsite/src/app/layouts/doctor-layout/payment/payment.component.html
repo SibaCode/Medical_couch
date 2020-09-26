@@ -1,0 +1,75 @@
+<section id="pricing" class="pricing" >
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Pricing</h2>
+      </div>
+
+      <div class="row">
+
+
+
+        <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+          <div class="box featured" data-aos="fade-up" data-aos-delay="200">
+            <h3>Online prescription upload site </h3>
+            <h4><sup>R</sup>85<span> / month</span></h4>
+
+            <button class="btn btn-primary btn-block btn-lg login-btn btn-block btn-outline-primary active" >Select</button>
+          </div>
+        </div>
+  <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+   <div class="box featured" data-aos="fade-up" data-aos-delay="200">
+     <h3>Photo shoot</h3>
+     <h4><sup>R</sup>250<span> Once off </span></h4>
+
+     <button class="btn btn-primary btn-block btn-lg login-btn btn-block btn-outline-primary active" >Select</button>
+   </div>
+ </div>
+ <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+   <div class="box featured" data-aos="fade-up" data-aos-delay="200">
+     <h3>Website redirecting </h3>
+     <h4><sup>R</sup>50<span> / month</span></h4>
+     <button class="btn btn-primary btn-block btn-lg login-btn btn-block btn-outline-primary active" >Select</button>
+   </div>
+ </div>
+ <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+   <div class="box featured" data-aos="fade-up" data-aos-delay="200">
+     <h3>Advertising space </h3>
+     <h4><sup>C</sup>20<span> / click</span></h4>
+     <button class="btn btn-primary btn-block btn-lg login-btn btn-block btn-outline-primary active" >Select</button>
+   </div>
+ </div>
+
+
+
+
+ 
+
+
+      </div>
+
+    </div>
+
+
+ 
+  </section>
+
+  <!-- <button class="btn btn-primary btn-block btn-lg login-btn btn-block btn-outline-primary active" >Select</button> -->
+  <!-- sbtu01@payfast.co.za -->
+  <!-- clientpass -->
+  <!-- Merchant w5ljjnl9brhhi -->
+  <!-- Merchant ID 10019991 -->
+  <form #form action="https://sandbox.payfast.co.za/eng/process" method="post">
+    <input type="hidden" name="merchant_id" value="10019991">
+    <input type="hidden" name="merchant_key" value="w5ljjnl9brhhi">
+    <input type="hidden" name="amount" value="100.00">
+    <input type="hidden" name="item_name" value="Test Product">
+    <input type="hidden" name="return_url" [value]="return_url">
+    <input type="hidden" name="cancel_url" [value]="cancel_url">
+    <input type="hidden" name="notify_url" [value]="notify_url">
+    <input type="hidden" name="payment_method" value="cc">
+    <input (click)="form.submit()" type="submit" class="btn btn-primary btn-block btn-lg login-btn btn-block btn-outline-primary active" >
+ </form> 
+
+
+ <a href="https://www.payfast.co.za/eng/process?cmd=_paynow&amp;receiver=16428813&amp;item_name=subscription&amp;amount=100.00"><img src="https://www.payfast.co.za/images/buttons/light-small-paynow.png" width="165" height="36" alt="Pay" title="Pay Now with PayFast" /></a>

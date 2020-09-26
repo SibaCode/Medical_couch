@@ -109,17 +109,17 @@
                     <form [formGroup]="loginForm" (ngSubmit)="login()" >
                     
                       <div class="login-header" >
-                        <h3>Login </h3>
+                        <h3>Login as</h3>
                       </div>
                       <div class="row row-sm" style=" padding-top: 10px;margin-right: -3px;    margin-left: 1px;">
                         <div class="col-4">
-                          <a routerLink="/patient/doctor-profile"class="btn book-btn btn-block btn-outline-primary  active">Patient</a>
+                          <a  [ngClass]="p" (click)="selected('p')">Patient</a>
                         </div>
                         <div class="col-4">
-                          <a routerLink="/patient/booking"class="btn book-btn btn-block btn-outline-primary active">Doctor</a>
+                          <a  [ngClass]="d"(click)="selected('d')">Doctor</a>
                         </div>
                         <div class="col-4">
-                          <a routerLink="/patient/booking"class="btn book-btn btn-block btn-outline-primary active">Pharmacy </a>
+                          <a [ngClass]="ph" (click)="selected('ph')">Pharmacy </a>
                         </div>
                       </div>
                       <hr>

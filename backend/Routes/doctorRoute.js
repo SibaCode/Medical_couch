@@ -36,12 +36,15 @@ doctorRoute.post("/practice", auth, async(req, res) => {
 });
 
 // get Practice 
-doctorRoute.get("/practice", auth, async(req, res) => {
+doctorRoute.get("/practice/:id", auth, async(req, res) => {
     
-    result = await doctorController.getPractice(req.body);
+    result = await doctorController.getPractice(req.params);
   
     res.status(result.status).send(result);
 });
+
+
+
 
 
   

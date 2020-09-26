@@ -175,4 +175,7 @@ async function getPractice(data) {
 
 
 
+
+
+
 module.exports = { register , login , getAll, addPractice , getPractice ,  };

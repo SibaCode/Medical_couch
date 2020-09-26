@@ -24,6 +24,10 @@ constructor(private http: HttpClient) { }
       return this.http.post(environment.url + "review" , data , { headers: this.getheaders() })
     }
 
+    public getSinglePractrice(id) {
+      return this.http.get(environment.url + "doctor/practice/" + id , { headers: this.getheaders() })
+    }
+
 
 
 }

@@ -9,13 +9,15 @@ import { PrescriptionsComponent } from './prescriptions/prescriptions.component'
 import { ProfileComponent } from './profile/profile.component';
 import { DoctorProfileComponent } from './doctor-profile/doctor-profile.component';
 import { BookingComponent } from './booking/booking.component';
+import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(PatientLayoutRoutes),
     FormsModule,
     ReactiveFormsModule,
-    // NgbModule
+    GooglePlaceModule
+
   ],
   declarations: [
     DashboardComponent,
@@ -24,6 +26,7 @@ import { BookingComponent } from './booking/booking.component';
     ProfileComponent,
     DoctorProfileComponent,
     BookingComponent,
+    
 
   ]
 })
