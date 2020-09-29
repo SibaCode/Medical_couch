@@ -23,7 +23,7 @@ const patient = {
         Please follow <a href="$link">link </a> below to reset your password
         <br/> 
         <br/>
-        <a href="$link"> $link </a> 
+        <a href="$link"> <p>$link</p> </a> 
         <br>
         If you did not request for this action please ignore this email
         <br>

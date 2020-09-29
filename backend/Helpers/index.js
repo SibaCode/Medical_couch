@@ -20,5 +20,6 @@ module.exports = {
     validate2: validate2 ,
     log: console.log,
     upload: upload,
-    msg: msg 
+    msg: msg ,
+    generateTokenForgot: auth.generateTokenForgot
 }

@@ -19,6 +19,7 @@ import { DoctorLayoutComponent } from './layouts/doctor-layout/doctor-layout.com
 import { PharmacyLayoutComponent } from './layouts/pharmacy-layout/pharmacy-layout.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { ResetComponent } from './website/reset/reset.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +33,7 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
     PatientLayoutComponent,
     DoctorLayoutComponent,
     PharmacyLayoutComponent,
+    ResetComponent,
   ],
   imports: [
     BrowserModule,

@@ -39,6 +39,16 @@ patientRoute.post("/review" , auth , async(req, res) => {
   
     res.status(result.status).send(result);
 });
+
+
+// Forgot password
+patientRoute.post("/forgot" , async(req, res) => {
+    
+    result = await patientController.forgotPass(req.body);
+  
+    res.status(result.status).send(result);
+});
+
   
 
 

@@ -9,6 +9,7 @@ import { RegisterComponent } from './website/register/register.component';
 import { PatientLayoutComponent } from './layouts/patient-layout/patient-layout.component';
 import { DoctorLayoutComponent } from './layouts/doctor-layout/doctor-layout.component';
 import { PharmacyLayoutComponent } from './layouts/pharmacy-layout/pharmacy-layout.component';
+import { ResetComponent } from './website/reset/reset.component';
 const routes: Routes = [
   {path:'' , component:HomeComponent},
   {path:'home' , component:HomeComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path:'pharmacy-information' , component:PharmacyComponent},
   {path:'doctor-information' , component:DoctorComponent},
   {path:'patient-information' , component:PatientComponent},
+  {path:'reset/:id', component: ResetComponent},
   {  path: 'patient',
        component: PatientLayoutComponent,
        children: [

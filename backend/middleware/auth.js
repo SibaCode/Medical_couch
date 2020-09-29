@@ -19,6 +19,7 @@ async function authGuard(req , res, next ) {
                         
                         if(user[0][0].id) {
                             req.body.id = user[0][0].id ; 
+                            req.body.type = user[0][0].type ; 
                            next()  ;
                         }else{
 

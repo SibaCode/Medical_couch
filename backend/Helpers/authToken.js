@@ -32,4 +32,15 @@ async function verifyToken(token) {
   });
 }
 
-module.exports = { generateToken, verifyToken };
+
+function generateTokenForgot(data) {
+  //create a token
+  const token = jwt.sign(data, textKey, {
+    algorithm: 'HS256',
+    expiresIn: "1h", //expires in 2 minutes
+  });
+  return token;
+}
+
+
+module.exports = { generateToken, verifyToken , generateTokenForgot};

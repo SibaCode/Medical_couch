@@ -1,4 +1,4 @@
-const{ response,validate,queryFunction,sendEmail,generateToken,verifyToken , msg , validate2 } = require('../Helpers');
+const{ response,validate,queryFunction,sendEmail,generateToken,verifyToken , generateTokenForgot, msg , validate2 } = require('../Helpers');
 const bcrypt = require ('bcryptjs');
 const validator = require ('validator'); //import validator.js
 
@@ -178,5 +178,104 @@ async function addReview(data) {
 }
 
 
+async function checkEmail(data) {
 
-module.exports = { register , login , update, addReview };
+  let fields = ['email' , 'type'] ;
+
+  let check = validate2(data,fields)  ; 
+
+  if(check.length > 0 ) {
+    return response(400, 'Invalid fields' , check);
+  }
+
+  let dataPop = [] ; 
+
+  fields.forEach(field => {
+      dataPop.push(data[field])
+  });
+
+
+  // `INSERT INTO users SET ?`
+  let sql = ' CALL 	checkEmail(?);';
+ 
+
+  return queryFunction(sql, dataPop).then( result => {
+    //await mail.sendEmail(data.email, msg.registerMessage(result[0].first_name), msg.registerSubject());
+
+      return result[0].length > 0 ? response(200, 'Found' , result[0] ) : response(404, 'Not found')
+    
+    })
+    .catch(error => {
+
+      //http status of 500 = internal server error
+      return response(500, 'Oops! we\'re experiencing some problems on our servers, please try again later!', error.sqlMessage );
+    });
+}
+
+
+async function checkEmail(data) {
+
+  let fields = ['email' , 'type'] ;
+
+  let check = validate2(data,fields)  ; 
+
+  if(check.length > 0 ) {
+    return response(400, 'Invalid fields' , check);
+  }
+
+  let dataPop = [] ; 
+
+  fields.forEach(field => {
+      dataPop.push(data[field])
+  });
+
+
+  // `INSERT INTO users SET ?`
+  let sql = ' CALL 	checkEmail(?);';
+ 
+
+  return queryFunction(sql, dataPop).then( result => {
+    //await mail.sendEmail(data.email, msg.registerMessage(result[0].first_name), msg.registerSubject());
+
+      return result[0].length > 0 ? result[0] : false
+    
+    })
+    .catch(error => {
+
+      //http status of 500 = internal server error
+      return false
+    });
+}
+
+
+
+
+async function forgotPass(data) {
+
+  
+
+  if( !checkEmail(data)) {
+    return response(404, 'Email not found try registering' , result[0] )
+  }
+
+
+  let token = generateTokenForgot(data)
+  
+  let url = 'http://localhost:4200/reset/' + token;
+
+  sendEmail('cj.sibusiso@gmail.com', msg.patient.forgot.msg.replace('$link' , url).replace('$link' , url).replace('$link' ,url) , msg.patient.forgot.subject).then( res => {
+    console.log(res);
+  }, err => {
+    console.log(err);
+  })
+
+
+  return response(200, 'Email has been sent with your reset link'  )
+
+}
+
+
+
+
+
+module.exports = { register , login , update, addReview , forgotPass};
