@@ -29,6 +29,9 @@
             <a  routerLink="/patient/dashboard">Find Doctors </a>
           </li>
           <li>
+            <a  routerLink="/patient/booking">Booking </a>
+          </li>
+          <li>
             <a  routerLink="/patient/appointments">Appointments </a>
           </li>
           <li>
@@ -80,13 +83,13 @@
             </div>
             <div class="card-body">
             <div class="filter-widget">
-              <div class="cal-icon">
+              <div class="">
                 <!-- <input type="text" class="form-control datetimepicker" placeholder="Select Date"> -->
                 <input class="form-control" ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)"/>
               </div>
             </div>
-            
-            
+
+
               <div class="btn-search">
                 <button type="button" class="btn btn-block">Search</button>
               </div>
@@ -115,7 +118,7 @@
                     </h3>
                     <p class="speciality">{{ practice.discipline }}</p>
                     <div class="rating">
-                      
+
 
 
                       <div [ngSwitch]="practice.Review">
@@ -126,7 +129,7 @@
                           <i class="fas fa-star "></i>
                           <i class="fas fa-star "></i>
                           <i class="fas fa-star "></i>
-                 
+
                         </div>
 
                         <div *ngSwitchCase="2">
@@ -136,7 +139,7 @@
                           <i class="fas fa-star "></i>
                           <i class="fas fa-star "></i>
                           <i class="fas fa-star "></i>
-          
+
                         </div>
 
                         <div *ngSwitchCase="3">
@@ -145,8 +148,8 @@
                           <i class="fas fa-star filled"></i>
                           <i class="fas fa-star "></i>
                           <i class="fas fa-star "></i>
-                          
-                        
+
+
                         </div>
 
                         <div *ngSwitchCase="4">
@@ -164,7 +167,7 @@
                           <i class="fas fa-star filled"></i>
                           <i class="fas fa-star filled"></i>
                         </div>
-                     
+
                         <!--default case when there are no matches -->
                         <div *ngSwitchDefault>
                           <i class="fas fa-star "></i>

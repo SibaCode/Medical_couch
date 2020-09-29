@@ -29,6 +29,9 @@
             <a  routerLink="/patient/dashboard">Find Doctors </a>
           </li>
           <li>
+            <a  routerLink="/patient/booking">Booking </a>
+          </li>
+          <li>
             <a   routerLink="/patient/appointments">Appointments </a>
           </li>
           <li>
@@ -72,12 +75,12 @@
 
 
           <div class="col-md-12 col-lg-12 col-xl-12">
-            
+
             <div class="card">
               <div class="card-body">
 <form [formGroup]="userForm" (ngSubmit)="update()">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-8">
         <div class="form-group card-label">
           <div class="change-avatar">
             <div class="profile-img">
@@ -93,28 +96,29 @@
           </div>
         </div>
       </div>
+      <div class="col-md-4 ">
+        <div class="form-group card-label">
+          <label>Title </label>
+          <select class="form-control select">
+                   <option>Mr</option>
+                   <option>Miss</option>
+                   <option>Mrs</option>
+                   <option>Prof</option>
+                   <option>Dr</option>
+                 </select>
+        </div>
+      </div>
           </div>
           <div class="row info-widget">
-          <div class="col-md-4 pr-1">
-            <div class="form-group card-label">
-              <label>Title </label>
-              <select class="form-control select">
-                       <option>Mr</option>
-                       <option>Miss</option>
-                       <option>Mrs</option>
-                       <option>Prof</option>
-                       <option>Dr</option>
-                     </select>
-            </div>
-          </div>
-          <div class="col-md-5 pr-1">
+
+          <div class="col-md-6 pr-1">
             <div class="form-group card-label">
               <label>First Name</label>
                       <input type="text" class="form-control" formControlName="name">
             </div>
           </div>
 
-            <div class="col-md-3 pr-1">
+            <div class="col-md-6 pr-1">
               <div class="form-group card-label">
                 <label>Last Name</label>
                 <input type="text" class="form-control" formControlName="surname">
@@ -126,7 +130,8 @@
       <div class="col-md-6 pr-1">
         <div class="form-group card-label">
           <label>ID Number</label>
-                  <input type="email" class="form-control" formControlName="idno">
+                  <input type="email" class="form-control" formControlName="idno" readonly>
+
         </div>
       </div>
       <div class="col-md-6 pr-1">

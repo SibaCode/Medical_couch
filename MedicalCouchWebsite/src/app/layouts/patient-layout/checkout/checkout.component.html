@@ -1,0 +1,166 @@
+<div class="main-wrapper">
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg header-nav">
+      <div class="navbar-header">
+        <a id="mobile_btn" >
+          <span class="bar-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </a>
+        <a class="navbar-brand logo">
+          <img src="assets/Images/logo.png" class="img-fluid" alt="Logo">
+        </a>
+      </div>
+      <div class="main-menu-wrapper">
+        <div class="menu-header">
+          <a class="menu-logo">
+            <img src="assets/Images/logo.png" class="img-fluid" alt="Logo">
+          </a>
+          <a id="menu_close" class="menu-close" >
+            <i class="fas fa-times"></i>
+          </a>
+        </div>
+        <ul class="main-nav" style="margin-left: auto;">
+          <li>
+            <a  routerLink="/patient/dashboard">Find Doctors </a>
+          </li>
+          <li  class="active">
+            <a  routerLink="/patient/booking">Booking </a>
+          </li>
+          <li>
+            <a  routerLink="/patient/appointments">Appointments </a>
+          </li>
+          <li>
+            <a routerLink="/patient/prescriptions">Prescriptions </a>
+          </li>
+          <li>
+            <a  routerLink="/patient/profile">Profile </a>
+          </li>
+
+
+          <li >
+            <a routerLink="logout()">Logout </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- /Header -->
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb-bar">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-md-8 col-12">
+          <nav aria-label="breadcrumb" class="page-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Search</li>
+            </ol>
+          </nav>
+          <h2 class="breadcrumb-title">Booking</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Content -->
+    <div class="content">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-7 col-lg-8">
+            <div class="card">
+              <div class="card-body">
+
+
+                <div >
+
+                  <!-- Personal Information -->
+                  <div class="info-widget">
+                    <h4 class="card-title">Doctor Notes</h4>
+                    <div class="row">
+                      <div class="col-md-12 col-sm-12">
+                        <div class="form-group card-label">
+                          <label>Symptoms </label>
+                          <input class="form-control" type="text">
+                        </div>
+                      </div>
+
+                    </div>
+
+                      <div class="submit-section mt-4">
+                        <button type="submit" class="btn btn-primary submit-btn">Book</button>
+                      </div>
+                      <!-- /Submit Section -->
+
+                  </div>
+                  <!-- /Personal Information -->
+
+                </div>
+                <!-- /Checkout Form -->
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-md-5 col-lg-4 theiaStickySidebar">
+
+            <!-- Booking Summary -->
+            <div class="card booking-card">
+              <div class="card-header">
+                <h4 class="card-title">Booking Summary</h4>
+              </div>
+              <div class="card-body">
+
+                <!-- Booking Doctor Info -->
+                <div class="booking-doc-info">
+                  <a href="doctor-profile.html" class="booking-doc-img">
+                    <img src="assets/img/doctors/doctor-thumb-02.jpg" alt="User Image">
+                  </a>
+                  <div class="booking-info">
+                    <h4><a href="doctor-profile.html">Dr. Name</a></h4>
+                    <div class="rating">
+                      <i class="fas fa-star filled"></i>
+                      <i class="fas fa-star filled"></i>
+                      <i class="fas fa-star filled"></i>
+                      <i class="fas fa-star filled"></i>
+                      <i class="fas fa-star"></i>
+                      <span class="d-inline-block average-rating">35</span>
+                    </div>
+                    <div class="clinic-details">
+                      <p class="doc-location"><i class="fas fa-map-marker-alt"></i> Practice Name</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Booking Doctor Info -->
+
+                <div class="booking-summary">
+                  <div class="booking-item-wrap">
+                    <ul class="booking-date">
+                      <li>Date <span>16 Nov 2019</span></li>
+                      <li>Time <span>10:00 AM</span></li>
+                    </ul>
+
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /Booking Summary -->
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- /Page Content -->
+
+
+</div>
