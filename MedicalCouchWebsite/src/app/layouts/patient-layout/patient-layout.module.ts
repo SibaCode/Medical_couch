@@ -10,6 +10,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { DoctorProfileComponent } from './doctor-profile/doctor-profile.component';
 import { BookingComponent } from './booking/booking.component';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+import { CheckoutComponent } from './checkout/checkout.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -26,6 +27,7 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
     ProfileComponent,
     DoctorProfileComponent,
     BookingComponent,
+    CheckoutComponent,
     
 
   ]

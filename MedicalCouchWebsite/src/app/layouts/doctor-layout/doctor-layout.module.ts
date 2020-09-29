@@ -10,13 +10,12 @@ import { PracticeProfileComponent } from './practice-profile/practice-profile.co
 import { ProfileComponent } from './profile/profile.component';
 import { PaymentComponent } from './payment/payment.component';
 import { SuccessComponent } from './success/success.component';
-// import { BookingsComponent } from './bookings/bookings.component';
-// import { DoctorSidebarComponent } from './components/doctor-sidebar/doctor-sidebar.component';
-// import { DoctorNavbarComponent } from './components/doctor-navbar/doctor-navbar.component';
+// import { CalendarComponent } from './calendar/calendar.component';
+import { DoctorCalendarComponent } from './doctor-calendar/doctor-calendar.component';
 
 
 @NgModule({
-  declarations: [AppointmentsComponent, PracticeProfileComponent, ProfileComponent, PaymentComponent, SuccessComponent],
+  declarations: [AppointmentsComponent, PracticeProfileComponent, ProfileComponent, PaymentComponent, SuccessComponent , DoctorCalendarComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(DoctorLayoutRoutes),

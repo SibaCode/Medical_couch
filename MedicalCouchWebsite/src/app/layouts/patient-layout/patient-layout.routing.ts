@@ -5,6 +5,8 @@ import { AppointmentsComponent } from './appointments/appointments.component';
 import { PrescriptionsComponent } from './prescriptions/prescriptions.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DoctorProfileComponent } from './doctor-profile/doctor-profile.component';
+import { BookingComponent } from './booking/booking.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 export const PatientLayoutRoutes: Routes = [
   { path: '',      component: DashboardComponent },
@@ -12,12 +14,12 @@ export const PatientLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'appointments',      component: AppointmentsComponent },
     { path: 'prescriptions',      component: PrescriptionsComponent },
-    // { path: 'booking',           component: BookingComponent },
+    { path: 'booking',           component: BookingComponent },
     // { path: 'appointments',          component: AppointmentsComponent },
     { path: 'profile',     component: ProfileComponent},
     { path: 'doctor-profile/:id',     component: DoctorProfileComponent},
 
-    // { path: 'table',          component: TableComponent },
+    { path: 'checkout',          component: CheckoutComponent },
     // { path: 'typography',     component: TypographyComponent },
     // { path: 'icons',          component: IconsComponent },
     // { path: 'maps',           component: MapsComponent },
